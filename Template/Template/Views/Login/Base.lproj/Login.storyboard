@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Template" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9Z-oQ-Aiz">
+                                <rect key="frame" x="100" y="461" width="175" height="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FyK-Qc-RqD">
+                                <rect key="frame" x="100" y="510" width="175" height="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEW-Ii-bdI">
+                                <rect key="frame" x="95" y="75" width="185" height="136"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="88"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="bEW-Ii-bdI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="0ZC-j4-JdV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bEW-Ii-bdI" secondAttribute="trailing" constant="95" id="58E-qR-mgu"/>
+                            <constraint firstItem="FyK-Qc-RqD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="62m-Db-YYb"/>
+                            <constraint firstItem="o9Z-oQ-Aiz" firstAttribute="height" secondItem="FyK-Qc-RqD" secondAttribute="height" id="Br5-WT-9EE"/>
+                            <constraint firstItem="o9Z-oQ-Aiz" firstAttribute="width" secondItem="FyK-Qc-RqD" secondAttribute="width" id="IMg-6T-KPH"/>
+                            <constraint firstItem="o9Z-oQ-Aiz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JJe-q0-DZ4"/>
+                            <constraint firstItem="o9Z-oQ-Aiz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="MR0-Jq-00o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FyK-Qc-RqD" secondAttribute="bottom" constant="133" id="VxL-He-Qja"/>
+                            <constraint firstItem="bEW-Ii-bdI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="hGO-Yn-9HP"/>
+                            <constraint firstItem="FyK-Qc-RqD" firstAttribute="top" secondItem="o9Z-oQ-Aiz" secondAttribute="bottom" constant="25" id="oM9-L3-9l7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o9Z-oQ-Aiz" secondAttribute="trailing" constant="100" id="tge-TG-gja"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextfield" destination="o9Z-oQ-Aiz" id="Xqx-kp-6de"/>
+                        <outlet property="passwordTextfield" destination="FyK-Qc-RqD" id="bzk-QJ-svh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+</document>

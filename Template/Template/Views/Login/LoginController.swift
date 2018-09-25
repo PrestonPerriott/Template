@@ -21,11 +21,12 @@ class LoginController: NSObject {
 extension LoginController: UITextFieldDelegate {
         
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.textFieldWillShift(textField, distance: -210, up: true)
+        ///TODO: Fix effect logic
+        textField.textFieldWillShift(textField, distance: -190, up: true)
         }
         
     func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.textFieldWillShift(textField, distance: -210, up: false)
+        textField.textFieldWillShift(textField, distance: -190, up: false)
         }
         
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

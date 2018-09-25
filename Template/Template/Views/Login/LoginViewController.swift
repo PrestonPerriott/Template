@@ -26,6 +26,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        delegationSetUp()
         controller.delegate = self
     }
     @IBAction func didTouchUsernameField(_ sender: UITextField) {
@@ -41,6 +42,9 @@ extension LoginViewController: LoginControllerDelegate {
     private func guiSetup() {
         emailTextfield.styleBorder()
         passwordTextfield.styleBorder()
+    }
+    
+    private func delegationSetUp() {
         emailTextfield.delegate = controller
         passwordTextfield.delegate = controller
         emailTextfield.tag = 1

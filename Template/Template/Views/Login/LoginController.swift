@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 protocol LoginControllerDelegate: class {
-    
+    ///TODO: Type any for now, but expecting a user
+    func login(with email: String, password: String, completion: @escaping CompletionHelper<Any>)
 }
 
 class LoginController: NSObject {

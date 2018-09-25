@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var emailTextfield: UITextField!
+    /// TODO: Login Button
     
     private let controller = LoginController()
     private var keyboard = IQKeyboardManager.sharedManager()
@@ -38,6 +39,10 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: LoginControllerDelegate {
+    
+    func login(with email: String, password: String, completion: @escaping ((CompletionResults<Any>) -> Void)) {
+        ///TODO: Realm logic for validating user
+    }
     
     private func guiSetup() {
         emailTextfield.styleBorder()

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class LoginViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextfield: UITextField!
     
     private let controller = LoginController()
+    private var keyboard = IQKeyboardManager.sharedManager()
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -24,16 +26,26 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        controller.delegate = self
+    }
+    @IBAction func didTouchUsernameField(_ sender: UITextField) {
+        keyboard.preventShowingBottomBlankSpace = true
+    }
+    @IBAction func didTouchPasswordField(_ sender: UITextField) {
+        keyboard.preventShowingBottomBlankSpace = true
     }
 }
 
-extension LoginViewController {
+extension LoginViewController: LoginControllerDelegate {
     
     private func guiSetup() {
         emailTextfield.styleBorder()
         passwordTextfield.styleBorder()
+        emailTextfield.delegate = controller
+        passwordTextfield.delegate = controller
+        emailTextfield.tag = 1
+        passwordTextfield.tag = 2
         
-        emailTextfield.placeholder = "Email"
-        passwordTextfield.placeholder = "Password"
+        keyboard.shouldResignOnTouchOutside = true
     }
 }

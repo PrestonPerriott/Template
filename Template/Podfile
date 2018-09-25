@@ -1,0 +1,30 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+use_frameworks!
+workspace 'Template.xcworkspace'
+
+def pods
+    pod 'SwiftLint'
+    pod 'IQKeyboardManagerSwift', '~> 5.0.8'
+end
+
+def sharedPods
+    pod 'KeychainSwift', '~> 11.0'
+    pod 'RealmSwift', '~> 3.7.6'
+    pod 'SwiftyJSON', '~> 4.0'
+    pod 'Alamofire', '~> 4.7'
+    pod 'AlamofireNetworkActivityIndicator', '~> 2.2'
+end
+
+target 'Template' do
+  # Pods for Template
+  pods
+  sharedPods
+
+  target 'TemplateTests' do
+    
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

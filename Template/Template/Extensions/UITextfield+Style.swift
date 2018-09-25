@@ -32,4 +32,15 @@ extension UITextField {
         }
         return true
     }
+    
+    func textFieldWillShift(_ textfield: UITextField, distance: Int, up: Bool) {
+        let duration = 0.25
+        let movement: CGFloat = CGFloat(up ? distance : -distance)
+        
+        UIView.beginAnimations("animateTextField", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(duration)
+        frame = frame.offsetBy(dx: 0, dy: movement)
+        UIView.commitAnimations()
+    }
 }

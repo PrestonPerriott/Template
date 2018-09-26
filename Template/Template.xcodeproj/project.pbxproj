@@ -10,6 +10,7 @@
 		691F302F79F8359843A5D1F2 /* Pods_TemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E1E1DFB06175EE7FA74860 /* Pods_TemplateTests.framework */; };
 		834D5DAE2159DE40001614CD /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D5DAD2159DE40001614CD /* RealmService.swift */; };
 		834D5DB12159E4F3001614CD /* CompletionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D5DB02159E4F3001614CD /* CompletionHelper.swift */; };
+		834D5DB4215AD414001614CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D5DB3215AD414001614CD /* User.swift */; };
 		836ECAFB21581CF100B6AA20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836ECAFA21581CF100B6AA20 /* AppDelegate.swift */; };
 		836ECB0021581CF100B6AA20 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836ECAFE21581CF100B6AA20 /* Login.storyboard */; };
 		836ECB0221581CF100B6AA20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836ECB0121581CF100B6AA20 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		69E1E1DFB06175EE7FA74860 /* Pods_TemplateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemplateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		834D5DAD2159DE40001614CD /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		834D5DB02159E4F3001614CD /* CompletionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHelper.swift; sourceTree = "<group>"; };
+		834D5DB3215AD414001614CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		836ECAF721581CF000B6AA20 /* Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836ECAFA21581CF100B6AA20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		836ECAFF21581CF100B6AA20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		834D5DB2215AD3FE001614CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				834D5DB3215AD414001614CD /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		836ECAEE21581CF000B6AA20 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 		836ECAF921581CF000B6AA20 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				834D5DB2215AD3FE001614CD /* Models */,
 				834D5DAF2159E4D7001614CD /* Helpers */,
 				836ECAFA21581CF100B6AA20 /* AppDelegate.swift */,
 				836ECB1E2158AC3300B6AA20 /* Extensions */,
@@ -360,6 +371,7 @@
 				834D5DAE2159DE40001614CD /* RealmService.swift in Sources */,
 				836ECAFB21581CF100B6AA20 /* AppDelegate.swift in Sources */,
 				836ECB202158ACB100B6AA20 /* UITextfield+Style.swift in Sources */,
+				834D5DB4215AD414001614CD /* User.swift in Sources */,
 				836ECB2521597C5800B6AA20 /* Strings+Validation.swift in Sources */,
 				834D5DB12159E4F3001614CD /* CompletionHelper.swift in Sources */,
 				836ECB2721597EDC00B6AA20 /* LoginController.swift in Sources */,

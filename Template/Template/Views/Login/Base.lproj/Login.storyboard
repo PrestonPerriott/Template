@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9Z-oQ-Aiz">
-                                <rect key="frame" x="100" y="449" width="175" height="30"/>
+                                <rect key="frame" x="75" y="482" width="225" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="r5h-7C-v3u"/>
                                 </constraints>
@@ -31,7 +31,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FyK-Qc-RqD">
-                                <rect key="frame" x="100" y="504" width="175" height="30"/>
+                                <rect key="frame" x="75" y="537" width="225" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="zHG-kA-BtY"/>
                                 </constraints>
@@ -43,7 +43,10 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEW-Ii-bdI">
-                                <rect key="frame" x="95" y="75" width="185" height="136"/>
+                                <rect key="frame" x="137.5" y="121" width="100" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="u1E-ZJ-a2H"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="88"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -51,21 +54,21 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="bEW-Ii-bdI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="0ZC-j4-JdV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bEW-Ii-bdI" secondAttribute="trailing" constant="95" id="58E-qR-mgu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FyK-Qc-RqD" secondAttribute="trailing" constant="100" id="8rE-5J-kak"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FyK-Qc-RqD" secondAttribute="bottom" constant="133" id="JjR-gS-D9K"/>
-                            <constraint firstItem="o9Z-oQ-Aiz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="MR0-Jq-00o"/>
-                            <constraint firstItem="o9Z-oQ-Aiz" firstAttribute="top" secondItem="bEW-Ii-bdI" secondAttribute="bottom" constant="238" id="PH4-Nh-TA5"/>
-                            <constraint firstItem="FyK-Qc-RqD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="cBd-z6-PXE"/>
-                            <constraint firstItem="bEW-Ii-bdI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="hGO-Yn-9HP"/>
-                            <constraint firstItem="FyK-Qc-RqD" firstAttribute="top" secondItem="o9Z-oQ-Aiz" secondAttribute="bottom" constant="25" id="oM9-L3-9l7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o9Z-oQ-Aiz" secondAttribute="trailing" constant="100" id="tge-TG-gja"/>
+                            <constraint firstItem="bEW-Ii-bdI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="101" id="2zR-uB-lzF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FyK-Qc-RqD" secondAttribute="bottom" constant="100" id="4mb-Xs-W6X"/>
+                            <constraint firstItem="o9Z-oQ-Aiz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="900" constant="462" id="HB1-2U-cSi"/>
+                            <constraint firstItem="FyK-Qc-RqD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="IGt-nz-f9G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o9Z-oQ-Aiz" secondAttribute="trailing" constant="75" id="ON0-ek-EZt"/>
+                            <constraint firstItem="o9Z-oQ-Aiz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="bh2-MK-b1z"/>
+                            <constraint firstItem="FyK-Qc-RqD" firstAttribute="top" secondItem="o9Z-oQ-Aiz" secondAttribute="bottom" constant="25" id="bzb-2X-YAj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FyK-Qc-RqD" secondAttribute="trailing" constant="75" id="qUo-7h-0qN"/>
+                            <constraint firstItem="bEW-Ii-bdI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sc8-Vl-XmE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="emailTextfield" destination="o9Z-oQ-Aiz" id="Xqx-kp-6de"/>
+                        <outlet property="passwordBottomConstraint" destination="4mb-Xs-W6X" id="S86-Wb-A1Z"/>
                         <outlet property="passwordTextfield" destination="FyK-Qc-RqD" id="bzk-QJ-svh"/>
                     </connections>
                 </viewController>

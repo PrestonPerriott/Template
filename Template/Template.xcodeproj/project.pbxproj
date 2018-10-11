@@ -13,6 +13,7 @@
 		834D5DB4215AD414001614CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D5DB3215AD414001614CD /* User.swift */; };
 		835C362C216B21A900A94A52 /* NetworkCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835C362B216B21A900A94A52 /* NetworkCompletion.swift */; };
 		835C362E216B22E800A94A52 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835C362D216B22E800A94A52 /* NetworkService.swift */; };
+		835C363E216EC2FE00A94A52 /* Ecodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835C363D216EC2FE00A94A52 /* Ecodable+Dictionary.swift */; };
 		836ECAFB21581CF100B6AA20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836ECAFA21581CF100B6AA20 /* AppDelegate.swift */; };
 		836ECB0021581CF100B6AA20 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836ECAFE21581CF100B6AA20 /* Login.storyboard */; };
 		836ECB0221581CF100B6AA20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836ECB0121581CF100B6AA20 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		834D5DB3215AD414001614CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		835C362B216B21A900A94A52 /* NetworkCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCompletion.swift; sourceTree = "<group>"; };
 		835C362D216B22E800A94A52 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		835C363D216EC2FE00A94A52 /* Ecodable+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ecodable+Dictionary.swift"; sourceTree = "<group>"; };
 		836ECAF721581CF000B6AA20 /* Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836ECAFA21581CF100B6AA20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		836ECAFF21581CF100B6AA20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			children = (
 				836ECB1F2158ACB100B6AA20 /* UITextfield+Style.swift */,
 				836ECB2421597C5800B6AA20 /* Strings+Validation.swift */,
+				835C363D216EC2FE00A94A52 /* Ecodable+Dictionary.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				835C362C216B21A900A94A52 /* NetworkCompletion.swift in Sources */,
 				836ECB2521597C5800B6AA20 /* Strings+Validation.swift in Sources */,
 				834D5DB12159E4F3001614CD /* CompletionHelper.swift in Sources */,
+				835C363E216EC2FE00A94A52 /* Ecodable+Dictionary.swift in Sources */,
 				836ECB2721597EDC00B6AA20 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

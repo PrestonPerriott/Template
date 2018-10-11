@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias NetworkCompletion<T> = (() -> Void)
+typealias NetworkCompletion<T> = ((NetworkResults<T>) -> Void)
 
 struct NetworkResults<Response> {
     

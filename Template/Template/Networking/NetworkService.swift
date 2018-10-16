@@ -26,7 +26,7 @@ class NetworkService<T: Decodable> {
     
     private var decodable: T.Type
     
-    private var error: NSError?
+    private var networkServiceError: NSError?
     /// Our closure thats called with completion
     private var compltetionHandler: NetworkCompletion<T>?
     
@@ -71,7 +71,6 @@ class NetworkService<T: Decodable> {
 
 extension NetworkService {
     ///Internal allows access from any source file in the defining model but not outside
-    
     ///build URL on path
     internal class func buildURL(_ path: EndPoints) -> URL? {
         return URL(string: "\(String(describing: base))\(path.rawValue)")
@@ -81,18 +80,47 @@ extension NetworkService {
         let headers = ["" : ""]
         return headers
     }
-    
     ///Private allows access only from enclosing declaration & any extension in the same source file
     ///Func allows us to abstract out the success/fail logic needed in Alamo Req
     private func handleSuccess(response: DataResponse<Data>) {
         switch response.result {
         case .success(let val):
             print("Sucess with val : \(val)")
+            requestDidSucceed(val)
         case .failure(let err):
             print("Failed with error: \(err)")
+            requestDidFail(response, error: err)
         }
+    ///Good to note DataResponse is a struct internal to Alamofire that reps a serialized resp
     }
     
     ///Accompaying functions for the sucess & failure of the Handler
     
+    /// Takes the data that we pass it
+    private func requestDidSucceed(_ data: Data) {
+        do {
+            let resObj = try JSONDecoder().decode(T.self, from: data)
+            self.compltetionHandler?(NetworkResults(err: nil, res: resObj))
+        } catch {
+            print("Our error trying to decode the res obj is: \(error)")
+            self.compltetionHandler?(NetworkResults(err: error as NSError, res: nil))
+        }
+    }
+    
+    ///Takes data from server and error from Alamofire Request
+    private func requestDidFail(_ data: DataResponse<Data>, error: Error) {
+        ///Sloppy attempt to see what type of error we got back
+        if let res = data.response {
+            networkServiceError = NSError(domain: res.description, code: res.statusCode, userInfo: nil)
+            self.compltetionHandler?(NetworkResults(err: networkServiceError, res: nil))
+        } else {
+            
+            if let alamoError = error as? Alamofire.AFError {
+                networkServiceError = NSError(domain: alamoError.errorDescription ?? "Failed Getting Error Description", code: alamoError.responseCode ?? 0, userInfo: nil)
+            } else {
+                networkServiceError = NSError(domain: "Unknown", code: 0, userInfo: nil)
+            }
+        }
+        self.compltetionHandler?(NetworkResults(err: networkServiceError, res: nil))
+    }
 }

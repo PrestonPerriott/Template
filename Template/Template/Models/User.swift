@@ -48,4 +48,3 @@ class User: Object, Codable {
         try container.encode(accessToken, forKey: .accessToken)
     }
 }
-

@@ -59,4 +59,15 @@ class RealmService: NSObject {
         let realm = try RealmService.realm()
         realm.deleteAll()
     }
+    
+    func save <T: User>(_ object: T) throws {
+        let realm = try RealmService.realm()
+        do {
+            try realm.write {
+                realm.add(object, update: true)
+            }
+        } catch {
+            throw NSError(domain: "Database Save Error", code: 4000, userInfo: nil)
+        }
+    }
 }

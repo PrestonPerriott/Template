@@ -17,6 +17,7 @@ class User: Object, Codable {
     @objc dynamic var id = ""
     @objc dynamic var username = ""
     @objc dynamic var email = ""
+    @objc dynamic var date = ""
     @objc dynamic var accessToken = ""
     
     override static func primaryKey() -> String? {
@@ -24,9 +25,10 @@ class User: Object, Codable {
     }
     
     internal enum CodingKeys: String, CodingKey {
-        case id = "id"
+        case id = "_id"
         case username = "username"
         case email = "email"
+        case date = "date"
         case accessToken = "accessToken"
     }
     
@@ -36,6 +38,7 @@ class User: Object, Codable {
         id = try container.decode(String.self, forKey: .id)
         username = try container.decode(String.self, forKey: .username)
         email = try container.decode(String.self, forKey: .email)
+        date = try container.decode(String.self, forKey: .date)
         accessToken = try container.decode(String.self, forKey: .accessToken)
     }
     
@@ -45,6 +48,7 @@ class User: Object, Codable {
         try container.encode(id, forKey: .id)
         try container.encode(username, forKey: .username)
         try container.encode(email, forKey: .email)
+        try container.encode(date, forKey: .date)
         try container.encode(accessToken, forKey: .accessToken)
     }
 }

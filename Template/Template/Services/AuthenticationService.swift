@@ -16,15 +16,14 @@ class AuthenticationService {
                       "email" : email,
                       "password" : password]
         
-        NetworkService.init(User.self).request(method: .get, path: EndPoints.resgister, params: params, complete: completion)
+        NetworkService.init(User.self).request(method: .post, path: EndPoints.resgister, params: params, complete: completion)
     }
     
-    class func login(username: String, password: String, email: String, completion: @escaping NetworkCompletion<User>) {
+    class func login(password: String, email: String, completion: @escaping NetworkCompletion<User>) {
        
-        let params = ["username" : username,
-                      "email" : email,
+        let params = ["email" : email,
                       "password" : password]
-     NetworkService.init(User.self).request(method: .get, path: EndPoints.login, params: params, complete: completion)
+     NetworkService.init(User.self).request(method: .post, path: EndPoints.login, params: params, complete: completion)
     }
     
     class func logout() {

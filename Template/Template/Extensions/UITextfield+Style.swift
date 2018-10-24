@@ -9,6 +9,13 @@
 import Foundation
 import UIKit
 
+class FloatingTextField: UITextField {
+    
+    private let borderThickness: (active: CGFloat, inactive: CGFloat) = (active: 2, inactive: 0.5)
+    
+    
+}
+
 extension UITextField {
     
     func styleBorder() {

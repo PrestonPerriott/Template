@@ -19,6 +19,7 @@ enum EndPoints: String {
     case resgister = "/register"
     case login = "/login"
     case refresh = "/refresh"
+    case home = "/home"
 }
 
 /// Object has to adhere to Decodable
@@ -60,10 +61,10 @@ class NetworkService<T: Decodable> {
         }
         
         compltetionHandler = complete
-        ///TODO: HEADERS
+        let headers = NetworkService.buildHeaders()
         
         /// https://stackoverflow.com/questions/39571812/extra-argument-method-in-call
-        Alamofire.request(url, method: method, parameters: params, encoding: JSONEncoding.default, headers: nil).validate().responseData(completionHandler: handleSuccess)
+        Alamofire.request(url, method: method, parameters: params, encoding: JSONEncoding.default, headers: headers).validate(statusCode: 200..<600).responseData(completionHandler: handleSuccess)
         
         
     }
@@ -73,11 +74,15 @@ extension NetworkService {
     ///Internal allows access from any source file in the defining model but not outside
     ///build URL on path
     internal class func buildURL(_ path: EndPoints) -> URL? {
-        return URL(string: "\(String(describing: base))\(path.rawValue)")
+        guard let base = base else {
+            return URL(string: "")
+        }
+        return URL(string: "\(base)\(path.rawValue)")
     }
     
     internal class func buildHeaders() -> HTTPHeaders {
-        let headers = ["" : ""]
+        let headers = ["Accept": "application/json",
+                       "Content-Type": "application/json"]
         return headers
     }
     ///Private allows access only from enclosing declaration & any extension in the same source file

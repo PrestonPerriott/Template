@@ -50,10 +50,29 @@ class LoginViewController: UIViewController {
         case "Register":
             print("Pressed Register")
             ///Code for registering
+            AuthenticationService.register(username: usernameTextField.text ?? "", password: passwordTextfield.text ?? "", email: emailTextfield.text ?? "", completion: {(result) in
+                if let err = result.err {
+                    
+                    print("Our error is : \(err.localizedDescription)")
+                } else {
+                    let mainCont = MainTabViewController()
+                    self.present(mainCont, animated: true, completion: nil)
+                }
+            })
             break
         case "Login":
             print("Pressed Login")
             ///Code for logging in
+            AuthenticationService.login(password: passwordTextfield.text ?? "", email: emailTextfield.text ?? "", completion: {(result) in
+                if let err = result.err {
+                    
+                    print("Our error is : \(err.localizedDescription)")
+                } else {
+                    let mainCont = MainTabViewController()
+                    self.present(mainCont, animated: true, completion: nil)
+                }
+            })
+            break
         default:
             print("Default invoked, error")
         }

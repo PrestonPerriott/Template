@@ -70,4 +70,15 @@ class RealmService: NSObject {
             throw NSError(domain: "Database Save Error", code: 4000, userInfo: nil)
         }
     }
+    
+    func saveDailyRecipes <T: List<Recipe>>(_ object: T) throws {
+        let realm = try RealmService.realm()
+        do {
+            try realm.write {
+                realm.add(object, update: true)
+            }
+        } catch {
+            throw NSError(domain: "Couldn't save Recipe to Realm", code: 4000, userInfo: nil)
+        }
+    }
 }

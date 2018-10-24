@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		691F302F79F8359843A5D1F2 /* Pods_TemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E1E1DFB06175EE7FA74860 /* Pods_TemplateTests.framework */; };
+		830CD66621800C9C003C91A9 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830CD66521800C9C003C91A9 /* Recipe.swift */; };
+		830CD668218016AF003C91A9 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830CD667218016AF003C91A9 /* RecipeService.swift */; };
+		830CD66B218019DE003C91A9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 830CD66A218019DE003C91A9 /* Home.storyboard */; };
+		830CD66D21801A0B003C91A9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830CD66C21801A0B003C91A9 /* HomeViewController.swift */; };
+		830CD66F21801A1B003C91A9 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830CD66E21801A1B003C91A9 /* HomeController.swift */; };
+		830CD673218022BD003C91A9 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830CD671218022BD003C91A9 /* HomeCollectionViewCell.swift */; };
+		830CD674218022BD003C91A9 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830CD672218022BD003C91A9 /* HomeCollectionViewCell.xib */; };
+		830CD6772180BA63003C91A9 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830CD6762180BA63003C91A9 /* MainTabViewController.swift */; };
+		830CD6792180C79A003C91A9 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830CD6782180C79A003C91A9 /* UIViewController+Navigation.swift */; };
 		831695E7217141010071C3A5 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831695E6217141010071C3A5 /* AuthenticationService.swift */; };
 		831695E92174D7D20071C3A5 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831695E82174D7D20071C3A5 /* UIButton+Style.swift */; };
 		834D5DAE2159DE40001614CD /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D5DAD2159DE40001614CD /* RealmService.swift */; };
@@ -44,6 +53,15 @@
 		52F52814FB41EF0C16C26F77 /* Pods-TemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemplateTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TemplateTests/Pods-TemplateTests.release.xcconfig"; sourceTree = "<group>"; };
 		60EEFFA50D861EAD08BE9289 /* Pods_Template.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Template.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E1E1DFB06175EE7FA74860 /* Pods_TemplateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemplateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		830CD66521800C9C003C91A9 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		830CD667218016AF003C91A9 /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
+		830CD66A218019DE003C91A9 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		830CD66C21801A0B003C91A9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		830CD66E21801A1B003C91A9 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		830CD671218022BD003C91A9 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		830CD672218022BD003C91A9 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		830CD6762180BA63003C91A9 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		830CD6782180C79A003C91A9 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 		831695E6217141010071C3A5 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		831695E82174D7D20071C3A5 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		834D5DAD2159DE40001614CD /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
@@ -108,6 +126,34 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		830CD669218019C7003C91A9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				830CD67021802277003C91A9 /* HomeCollectionViewCells */,
+				830CD66A218019DE003C91A9 /* Home.storyboard */,
+				830CD66C21801A0B003C91A9 /* HomeViewController.swift */,
+				830CD66E21801A1B003C91A9 /* HomeController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		830CD67021802277003C91A9 /* HomeCollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				830CD671218022BD003C91A9 /* HomeCollectionViewCell.swift */,
+				830CD672218022BD003C91A9 /* HomeCollectionViewCell.xib */,
+			);
+			path = HomeCollectionViewCells;
+			sourceTree = "<group>";
+		};
+		830CD6752180BA34003C91A9 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				830CD6762180BA63003C91A9 /* MainTabViewController.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
 		834D5DAF2159E4D7001614CD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				834D5DB3215AD414001614CD /* User.swift */,
+				830CD66521800C9C003C91A9 /* Recipe.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,7 +228,9 @@
 		836ECB1C21584B5B00B6AA20 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				830CD6752180BA34003C91A9 /* MainTabBar */,
 				836ECB0321581CF100B6AA20 /* LaunchScreen.storyboard */,
+				830CD669218019C7003C91A9 /* Home */,
 				836ECB212158AD7F00B6AA20 /* Login */,
 			);
 			path = Views;
@@ -192,6 +241,7 @@
 			children = (
 				834D5DAD2159DE40001614CD /* RealmService.swift */,
 				831695E6217141010071C3A5 /* AuthenticationService.swift */,
+				830CD667218016AF003C91A9 /* RecipeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -203,6 +253,7 @@
 				836ECB2421597C5800B6AA20 /* Strings+Validation.swift */,
 				835C363D216EC2FE00A94A52 /* Ecodable+Dictionary.swift */,
 				831695E82174D7D20071C3A5 /* UIButton+Style.swift */,
+				830CD6782180C79A003C91A9 /* UIViewController+Navigation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -301,9 +352,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				830CD674218022BD003C91A9 /* HomeCollectionViewCell.xib in Resources */,
 				836ECB0521581CF100B6AA20 /* LaunchScreen.storyboard in Resources */,
 				836ECB0221581CF100B6AA20 /* Assets.xcassets in Resources */,
 				836ECB0021581CF100B6AA20 /* Login.storyboard in Resources */,
+				830CD66B218019DE003C91A9 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,16 +443,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				830CD6772180BA63003C91A9 /* MainTabViewController.swift in Sources */,
 				835C362E216B22E800A94A52 /* NetworkService.swift in Sources */,
 				836ECB232158AD9400B6AA20 /* LoginViewController.swift in Sources */,
 				834D5DAE2159DE40001614CD /* RealmService.swift in Sources */,
 				831695E7217141010071C3A5 /* AuthenticationService.swift in Sources */,
 				831695E92174D7D20071C3A5 /* UIButton+Style.swift in Sources */,
+				830CD673218022BD003C91A9 /* HomeCollectionViewCell.swift in Sources */,
 				836ECAFB21581CF100B6AA20 /* AppDelegate.swift in Sources */,
 				836ECB202158ACB100B6AA20 /* UITextfield+Style.swift in Sources */,
+				830CD668218016AF003C91A9 /* RecipeService.swift in Sources */,
+				830CD66F21801A1B003C91A9 /* HomeController.swift in Sources */,
 				834D5DB4215AD414001614CD /* User.swift in Sources */,
 				835C362C216B21A900A94A52 /* NetworkCompletion.swift in Sources */,
+				830CD66621800C9C003C91A9 /* Recipe.swift in Sources */,
+				830CD66D21801A0B003C91A9 /* HomeViewController.swift in Sources */,
 				836ECB2521597C5800B6AA20 /* Strings+Validation.swift in Sources */,
+				830CD6792180C79A003C91A9 /* UIViewController+Navigation.swift in Sources */,
 				834D5DB12159E4F3001614CD /* CompletionHelper.swift in Sources */,
 				835C363E216EC2FE00A94A52 /* Ecodable+Dictionary.swift in Sources */,
 				836ECB2721597EDC00B6AA20 /* LoginController.swift in Sources */,

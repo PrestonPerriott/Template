@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCell" id="gTV-IL-0wX" customClass="HomeCollectionViewCell" customModule="Template" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="551" height="173"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="551" height="173"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nyc" translatesAutoresizingMaskIntoConstraints="NO" id="dal-0X-gWL">
+                        <rect key="frame" x="0.0" y="0.0" width="551" height="173"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rr1-VL-KX7">
+                        <rect key="frame" x="15" y="136.5" width="521" height="26.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9B6-Bx-gxF">
+                        <rect key="frame" x="32" y="113.5" width="132" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9B6-Bx-gxF" secondAttribute="trailing" constant="387" id="09m-rP-2eb"/>
+                <constraint firstItem="Rr1-VL-KX7" firstAttribute="top" secondItem="9B6-Bx-gxF" secondAttribute="bottom" constant="5" id="9pm-1y-tRh"/>
+                <constraint firstAttribute="bottom" secondItem="dal-0X-gWL" secondAttribute="bottom" id="OVO-b9-tIX"/>
+                <constraint firstItem="Rr1-VL-KX7" firstAttribute="top" secondItem="9B6-Bx-gxF" secondAttribute="bottom" constant="5" id="Oai-eC-cli"/>
+                <constraint firstItem="dal-0X-gWL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VBk-Pb-DiA"/>
+                <constraint firstAttribute="trailing" secondItem="Rr1-VL-KX7" secondAttribute="trailing" constant="15" id="YzZ-z9-l6F"/>
+                <constraint firstAttribute="trailing" secondItem="dal-0X-gWL" secondAttribute="trailing" id="Zrp-th-rHm"/>
+                <constraint firstItem="9B6-Bx-gxF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="32" id="bal-vL-Y2N"/>
+                <constraint firstItem="Rr1-VL-KX7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="ccb-Dh-SRH"/>
+                <constraint firstAttribute="bottom" secondItem="Rr1-VL-KX7" secondAttribute="bottom" constant="10" id="fZ9-SH-XyB"/>
+                <constraint firstItem="dal-0X-gWL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kcU-e5-P7m"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="551" height="173"/>
+            <connections>
+                <outlet property="caloriesLabel" destination="9B6-Bx-gxF" id="GiQ-d0-uJs"/>
+                <outlet property="recipeImageView" destination="dal-0X-gWL" id="5af-Qt-kPj"/>
+                <outlet property="recipeTitle" destination="Rr1-VL-KX7" id="Pm7-cG-U2F"/>
+            </connections>
+            <point key="canvasLocation" x="362.39999999999998" y="188.45577211394306"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="nyc" width="7112" height="2978"/>
+    </resources>
+</document>

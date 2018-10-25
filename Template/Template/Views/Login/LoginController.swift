@@ -51,15 +51,7 @@ class LoginController: NSObject {
 }
     
 extension LoginController: UITextFieldDelegate {
-        
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        ///TODO: Fix interaction with labels
-        }
-        
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        ///TODO: Fix Interaction with labels
-        }
-        
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
             nextField.becomeFirstResponder()
@@ -67,5 +59,5 @@ extension LoginController: UITextFieldDelegate {
             textField.resignFirstResponder()
         }
         return false
-        }
+    }
 }

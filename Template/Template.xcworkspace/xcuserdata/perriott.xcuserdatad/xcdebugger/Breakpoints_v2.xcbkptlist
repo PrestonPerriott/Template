@@ -9,29 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Template/Views/Login/LoginController.swift"
-            timestampString = "562096081.460517"
+            filePath = "Template/Views/Login/LoginViewController.swift"
+            timestampString = "562130178.80759"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "textFieldDidBeginEditing(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Template/Views/Login/LoginController.swift"
-            timestampString = "562096081.46065"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "textFieldDidEndEditing(_:)"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "usernameTextFieldEdited(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

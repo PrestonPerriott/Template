@@ -11,9 +11,9 @@ import IQKeyboardManagerSwift
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var emailTextfield: UITextField!
-    @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var usernameTextField: FloatField!
+    @IBOutlet weak var emailTextfield: FloatField!
+    @IBOutlet weak var passwordTextfield: FloatField!
     @IBOutlet weak var registrationSegmentControl: UISegmentedControl!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var passwordBottomConstraint: NSLayoutConstraint!
@@ -22,16 +22,14 @@ class LoginViewController: UIViewController {
     private weak var keyboard = IQKeyboardManager.sharedManager()
     private var initalConstant = CGFloat()
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        guiSetup()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guiSetup()
         delegationSetUp()
         usernameTextField.isHidden = true
         keyboard?.shouldResignOnTouchOutside = true
+        keyboard?.preventShowingBottomBlankSpace = true
         initalConstant = passwordBottomConstraint.constant
         
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardDidShow(sender:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
@@ -39,12 +37,27 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide(sender:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    @IBAction func didTouchUsernameField(_ sender: UITextField) {
-        keyboard?.preventShowingBottomBlankSpace = true
+    
+    @IBAction func usernameTextFieldEdited(_ sender: FloatField) {
+        guard let text = sender.text else {
+            return
+        }
+        sender.bottomBorder.backgroundColor = sender.updateBorder(text: text)
     }
-    @IBAction func didTouchPasswordField(_ sender: UITextField) {
-        keyboard?.preventShowingBottomBlankSpace = true
+    
+    @IBAction func emailTextFieldEdited(_ sender: FloatField) {
+        guard let text = sender.text else {
+            return
+        }
+        sender.bottomBorder.backgroundColor = sender.updateBorder(text: text)
     }
+    @IBAction func passwordTextFieldEdited(_ sender: FloatField) {
+        guard let text = sender.text else {
+            return
+        }
+        sender.bottomBorder.backgroundColor = sender.updateBorder(text: text)
+    }
+    
     @IBAction func didPressLoginButton(_ sender: UIButton) {
         switch sender.title(for: .normal) {
         case "Register":
@@ -82,11 +95,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController: LoginControllerDelegate {
    
     private func guiSetup() {
-        usernameTextField.styleBorder()
-        emailTextfield.styleBorder()
-        passwordTextfield.styleBorder()
         loginButton.styleBorder()
-        registrationSegmentControl.addTarget(self, action: #selector(tappedSegment), for: .valueChanged)
     }
     
     @objc func tappedSegment(_ sender: UISegmentedControl) {
@@ -97,9 +106,17 @@ extension LoginViewController: LoginControllerDelegate {
     private func delegationSetUp() {
         controller.delegate = self
         emailTextfield.delegate = controller
+        emailTextfield.type = .email
+        emailTextfield.placeholder = "Email"
         passwordTextfield.delegate = controller
+        passwordTextfield.type = .password
+        passwordTextfield.placeholder = "Password"
+        usernameTextField.delegate = controller
+        usernameTextField.type = .username
         emailTextfield.tag = 1
         passwordTextfield.tag = 2
+        
+        registrationSegmentControl.addTarget(self, action: #selector(tappedSegment), for: .valueChanged)
     }
     
     @objc func keyboardWillHide(sender: NSNotification) {

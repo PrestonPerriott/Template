@@ -13,9 +13,27 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var caloriesLabel: UILabel!
     @IBOutlet weak var recipeTitle: UILabel!
+    @IBOutlet weak var imageCoverView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+    }
+    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+        super.apply(layoutAttributes)
+        
+        let regHeight = HomeLayoutConstants.Cell.regularHeight
+        let featHeight = HomeLayoutConstants.Cell.featuredHeight
+        
+        let delta = 1 - ((featHeight - frame.height) / (featHeight - regHeight))
+        
+        let minAlpha: CGFloat = 0.3
+        let maxAlpha: CGFloat = 0.75
+        imageCoverView.alpha = maxAlpha - (delta * (maxAlpha - minAlpha))
+        
+        /// Scaling contents of cell
+        let scale = max(delta, 0.5)
+        recipeTitle.transform = CGAffineTransform(scaleX: scale, y: scale)
+        caloriesLabel.alpha = delta
     }
 }

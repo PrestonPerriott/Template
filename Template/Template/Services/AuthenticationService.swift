@@ -26,7 +26,11 @@ class AuthenticationService {
      NetworkService.init(User.self).request(method: .post, path: EndPoints.login, params: params, complete: completion)
     }
     
-    class func logout() {
-        
+    class func isLoggedIn() -> Bool {
+        return RealmService.shared.getCurrentUser() != nil
+    }
+    
+    class func logout() throws {
+        try RealmService.shared.erase()
     }
 }

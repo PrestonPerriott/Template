@@ -10,6 +10,33 @@ import Foundation
 import RealmSwift
 import SwiftyJSON
 
+enum HomeRecipeCategoryType: String, CaseIterable {
+    case italian
+    case french
+    case asain
+    case middleeastern
+    case spanish
+    case german
+    case american
+    case indian
+    case mexican
+    case healthy
+    case lowcarb
+    case lowcalorie
+    case kosher
+    case halal
+    case european
+    case spicy
+}
+
+extension HomeRecipeCategoryType {
+    static func random() -> HomeRecipeCategoryType {
+        let categories: [HomeRecipeCategoryType] = HomeRecipeCategoryType.allCases
+        let random = Int(arc4random()) % categories.count
+        return categories[random]
+    }
+}
+
 class Recipe: Object, Codable {
     
     @objc dynamic var title = ""
@@ -66,5 +93,3 @@ class Recipe: Object, Codable {
         try container.encode(totalTime, forKey: .totalTime)
     }
 }
-
-

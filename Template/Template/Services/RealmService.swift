@@ -16,7 +16,7 @@ class RealmService: NSObject {
     static let shared = RealmService()
         
     /// Gets an instance of realm
-    class func realm () throws -> Realm {
+   private class func realm () throws -> Realm {
         guard let realm = try? Realm() else {
             ///TODO: Make Error class
             throw NSError(domain: "Database Initialization error", code: -600, userInfo: nil)
@@ -25,7 +25,7 @@ class RealmService: NSObject {
     }
         
     /// Writes to realm
-    func write<T: Object> (_ object: T) throws {
+   private func write<T: Object> (_ object: T) throws {
         let realm = try RealmService.realm()
         
         do {
@@ -38,7 +38,7 @@ class RealmService: NSObject {
         }
     }
     
-    func write(block: DatabaseWriteBlock) throws {
+    private func write(block: DatabaseWriteBlock) throws {
         let realm = try RealmService.realm()
         
         do {
@@ -80,5 +80,13 @@ class RealmService: NSObject {
         } catch {
             throw NSError(domain: "Couldn't save Recipe to Realm", code: 4000, userInfo: nil)
         }
+    }
+    
+    func getCurrentUser() -> User? {
+        if let realm = try? RealmService.realm(),
+            let user = realm.objects(User.self).first {
+            return user
+        }
+        return nil
     }
 }

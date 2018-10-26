@@ -18,6 +18,7 @@ class User: Object, Codable {
     @objc dynamic var username = ""
     @objc dynamic var email = ""
     @objc dynamic var date = ""
+    @objc dynamic var previousCategory = ""
     @objc dynamic var accessToken = ""
     
     override static func primaryKey() -> String? {
@@ -29,6 +30,7 @@ class User: Object, Codable {
         case username = "username"
         case email = "email"
         case date = "date"
+        case previousCategory = "previousCategory"
         case accessToken = "accessToken"
     }
     
@@ -39,6 +41,7 @@ class User: Object, Codable {
         username = try container.decode(String.self, forKey: .username)
         email = try container.decode(String.self, forKey: .email)
         date = try container.decode(String.self, forKey: .date)
+        previousCategory = try container.decode(String.self, forKey: .previousCategory)
         accessToken = try container.decode(String.self, forKey: .accessToken)
     }
     
@@ -49,6 +52,15 @@ class User: Object, Codable {
         try container.encode(username, forKey: .username)
         try container.encode(email, forKey: .email)
         try container.encode(date, forKey: .date)
+        try container.encode(previousCategory, forKey: .previousCategory)
         try container.encode(accessToken, forKey: .accessToken)
+    }
+}
+
+extension User {
+    func isLoggedIn() -> Bool {
+        let realm = try RealmService.shared
+        
+        return false
     }
 }

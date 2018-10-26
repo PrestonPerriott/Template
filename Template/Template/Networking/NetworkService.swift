@@ -81,8 +81,15 @@ extension NetworkService {
     }
     
     internal class func buildHeaders() -> HTTPHeaders {
-        let headers = ["Accept": "application/json",
-                       "Content-Type": "application/json"]
+        var headers = ["Accept": "application/json",
+                       "Content-Type": "application/json",
+                       "Device": "\(UIDevice.current.model)",
+                       "Version": "\(UIDevice.current.systemVersion)"]
+        
+        guard let user = RealmService.shared.getCurrentUser() else {
+            return headers
+        }
+        headers["Authorization"] = user.accessToken
         return headers
     }
     ///Private allows access only from enclosing declaration & any extension in the same source file
@@ -107,6 +114,7 @@ extension NetworkService {
             let resObj = try JSONDecoder().decode(T.self, from: data)
             self.compltetionHandler?(NetworkResults(err: nil, res: resObj))
         } catch {
+            ///Need to make an error class 
             print("Our error trying to decode the res obj is: \(error)")
             self.compltetionHandler?(NetworkResults(err: error as NSError, res: nil))
         }

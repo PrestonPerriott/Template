@@ -20,6 +20,10 @@ class HomeViewController: UIViewController {
         controller.delegate = self
         setupCollectionView()
         
+        if let current = RealmService.shared.getCurrentUser() {
+            print("The accessToken of our current user is : \(current.accessToken)")
+        }
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -38,5 +42,6 @@ extension HomeViewController {
     controller.registerRecipeCells(recipeCollectionView: recipeCollectionView)
     recipeCollectionView.delegate = controller
     recipeCollectionView.dataSource = controller
+    recipeCollectionView.decelerationRate = UIScrollViewDecelerationRateFast
     }
 }

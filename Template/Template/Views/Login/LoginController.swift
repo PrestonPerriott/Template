@@ -23,9 +23,9 @@ class LoginController: NSObject {
         AuthenticationService.login(password: password, email: email, completion: {(results) in
             if let user = results.res {
                 do {
-                    ///TODO: Even tho we say user, object hasn't been created in Node yet!!
                      try RealmService.shared.save(user)
                     completion(NetworkResults(err: nil, res: user))
+                    
                 } catch {
                     let err =  NSError(domain: "Failed to Save to Realm", code: 5000, userInfo: nil)
                     completion(NetworkResults(err: results.err ?? err, res: nil))
@@ -41,6 +41,7 @@ class LoginController: NSObject {
                 do {
                     try RealmService.shared.save(user)
                     completion(NetworkResults(err: nil, res: user))
+                    
                 } catch {
                     let err =  NSError(domain: "Failed to Save to Realm", code: 5000, userInfo: nil)
                     completion(NetworkResults(err: results.err ?? err, res: nil))

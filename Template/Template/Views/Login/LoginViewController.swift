@@ -32,6 +32,8 @@ class LoginViewController: UIViewController {
         keyboard?.preventShowingBottomBlankSpace = true
         initalConstant = passwordBottomConstraint.constant
         
+        print("Attempting to Print logged in user : \(String(describing: RealmService.shared.getCurrentUser()))")
+        
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardDidShow(sender:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide(sender:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -62,10 +64,8 @@ class LoginViewController: UIViewController {
         switch sender.title(for: .normal) {
         case "Register":
             print("Pressed Register")
-            ///Code for registering
-            AuthenticationService.register(username: usernameTextField.text ?? "", password: passwordTextfield.text ?? "", email: emailTextfield.text ?? "", completion: {(result) in
+            controller.register(with: usernameTextField.text ?? "", email: emailTextfield.text ?? "", password: passwordTextfield.text ?? "", completion: {(result) in
                 if let err = result.err {
-                    
                     print("Our error is : \(err.localizedDescription)")
                 } else {
                     let mainCont = MainTabViewController()
@@ -75,10 +75,8 @@ class LoginViewController: UIViewController {
             break
         case "Login":
             print("Pressed Login")
-            ///Code for logging in
-            AuthenticationService.login(password: passwordTextfield.text ?? "", email: emailTextfield.text ?? "", completion: {(result) in
+            controller.login(with: emailTextfield.text ?? "", password: passwordTextfield.text ?? "", completion: {(result) in
                 if let err = result.err {
-                    
                     print("Our error is : \(err.localizedDescription)")
                 } else {
                     let mainCont = MainTabViewController()

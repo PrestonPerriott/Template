@@ -71,6 +71,32 @@ class RealmService: NSObject {
         }
     }
     
+    func updateUserField<T>(field: User.CodingKeys, with value:T) throws {
+        
+        let user = getCurrentUser()
+        let realm = try RealmService.realm()
+        do {
+            try realm.write {
+                switch field {
+                case .id:
+                    user?.id = value as! String
+                case .email:
+                    user?.email = value as! String
+                case .username:
+                    user?.username = value as! String
+                case .accessToken:
+                    user?.accessToken = value as! String
+                case .previousCategory:
+                    user?.previousCategory = value as! String
+                case .date:
+                    user?.date = value as! String
+                }
+            }
+        } catch {
+            throw NSError(domain: "Database Update Error", code: 4000, userInfo: nil)
+        }
+    }
+    
     func saveDailyRecipes <T: List<Recipe>>(_ object: T) throws {
         let realm = try RealmService.realm()
         do {
@@ -80,6 +106,14 @@ class RealmService: NSObject {
         } catch {
             throw NSError(domain: "Couldn't save Recipe to Realm", code: 4000, userInfo: nil)
         }
+    }
+    
+    func getDailyRecipes() -> Results<Recipe>? {
+        guard let realm = try? RealmService.realm() else {
+            return nil
+        }
+        let recipes = realm.objects(Recipe.self)
+        return recipes
     }
     
     func getCurrentUser() -> User? {

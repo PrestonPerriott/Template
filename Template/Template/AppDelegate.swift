@@ -8,6 +8,7 @@
 
 import IQKeyboardManagerSwift
 import UIKit
+import SVProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().enable = true
         IQKeyboardManager.sharedManager().enableAutoToolbar = false
         // Override point for customization after application launch.
+        SVProgressHUD.setDefaultStyle(.light)
+        SVProgressHUD.setDefaultAnimationType(.flat)
+        
         return true
     }
 

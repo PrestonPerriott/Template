@@ -33,23 +33,13 @@ class FloatField : UITextField, UITextFieldDelegate {
         bottomBorder.backgroundColor = UIColor.white // Set Border-Color
         bottomBorder.translatesAutoresizingMaskIntoConstraints = false
         
-        lowerBorder = UIView.init(frame: CGRect(x: 1, y: 0, width: 0, height: 0))
-        lowerBorder.backgroundColor = UIColor.lightGray // Set Border-Color
-        lowerBorder.translatesAutoresizingMaskIntoConstraints = false
-        
         addSubview(bottomBorder)
-        addSubview(lowerBorder)
         
         bottomBorder.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         bottomBorder.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         bottomBorder.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        bottomBorder.heightAnchor.constraint(equalToConstant: 1.75).isActive = true // Set Border-Strength
-        
-        lowerBorder.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 2.8).isActive = true
-        lowerBorder.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        lowerBorder.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        lowerBorder.heightAnchor.constraint(equalToConstant: 1.75).isActive = true // Set Border-Strength
-        
+        bottomBorder.heightAnchor.constraint(equalToConstant: 0.75).isActive = true // Set Border-Strength
+
     }
     
     func updateBorder(text: String) -> UIColor {

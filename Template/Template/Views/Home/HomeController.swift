@@ -6,8 +6,11 @@
 //  Copyright © 2018 Preston Perriott. All rights reserved.
 //
 
+import RealmSwift
 import Foundation
 import UIKit
+import SVProgressHUD
+
 protocol HomeControllerDelegate: class {
 }
 
@@ -17,6 +20,7 @@ class HomeController: NSObject {
     private var recipes = [Recipe]()
     private var didGetDaily: Bool = false
     private var randomCategory: HomeRecipeCategoryType = .healthy
+    private var currentUser: User?
     
     ///For now we randomize the search query
     ///In the future we'll want to save the last 10 past queries so we don't
@@ -29,53 +33,82 @@ class HomeController: NSObject {
         recipeCollectionView.register(UINib(nibName: "HomeCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "HomeCollectionViewCell")
     }
     
-    public func reloadData(complete: @escaping () -> Void)
-        {
+    public func reloadData(complete: @escaping () -> Void) {
+        
+        SVProgressHUD.show()
         let group = DispatchGroup()
         group.enter()
         ///Search Realm for saved Daily recipes before making call
         ///Search realm for last saved category and choose other
-        randomCategory = HomeRecipeCategoryType.random()
-        RecipeService.getDailyRecipes(for: randomCategory.rawValue, completion: {(results) in
-            if let returnedRecipes = results.res {
-                self.recipes = returnedRecipes
-                ///Save to realm
-                ///Save searched category to realm & saved recipe
-                group.leave()
-            } else {
-                let err = NSError(domain: "Unkown connection err", code: 300, userInfo: nil)
-                print(err)
-            }
-        })
-        group.notify(queue: .main) {
-            print("Reloaded data")
-            complete()
+        guard let user = RealmService.shared.getCurrentUser() else {
+            SVProgressHUD.dismiss()
+            group.leave()
+            return
         }
+        /// If theres already a documentated previousCategory return and don't hit API
+        /// Instead find dailyRecipes from Realm
+        
+//        if (user.previousCategory != "") {
+//            if let savedRecipes = (RealmService.shared.getDailyRecipes())
+//                {
+//                    recipes = Array(savedRecipes)
+//                }
+//                group.leave()
+//                return
+//        } else {
+//        /// Else hit the API for the recipes and save the category
+//
+//        }
+        
+            
+            RecipeService.getDailyRecipes(for: randomCategory.rawValue, completion: {(results) in
+                if let returnedRecipes = results.res {
+                    //self.recipes = returnedRecipes
+                    let list = List<Recipe>()
+                    for recipe in returnedRecipes {
+                        list.append(recipe)
+                    }
+                    do {
+                        try RealmService.shared.updateUserField(field: User.CodingKeys.previousCategory, with: self.randomCategory.rawValue)
+                        try RealmService.shared.saveDailyRecipes(list)
+                        print("Updated \n \(list)")
+                        self.recipes = returnedRecipes
+                    } catch {
+                        print("Error saving recipes to DB")
+                    }
+                } else {
+                    let err = NSError(domain: "Unknown connection err", code: 300, userInfo: nil)
+                    print(err)
+                }
+
+                SVProgressHUD.dismiss()
+                group.leave()
+                group.notify(queue: .main) {
+                    print("Reloaded data")
+                    complete()
+                }
+            })
+        
+        
     }
-    
 }
 
 extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return recipes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let colors = [UIColor.blue, UIColor.red, UIColor.purple, UIColor.orange, UIColor.green, UIColor.yellow, UIColor.gray]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath)
-        cell.backgroundColor = colors[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
+        cell.recipeImageView.image = UIImage(data: try! Data(contentsOf: URL(string: recipes[indexPath.item].image)!))
+        cell.recipeTitle.text = recipes[indexPath.item].title
+        cell.caloriesLabel.text = String(format: "%.0f", recipes[indexPath.item].calories) + " calories"
+        print(recipes[indexPath.item])
         return cell
     }
-    
-//     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let count: CGFloat = 5.0
-//        let screen = collectionView.frame.size.height
-//        return CGSize(width: collectionView.frame.size.width, height: (screen/count))
-//    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }
-    
 }

@@ -13,13 +13,31 @@ extension UIButton {
     
     func styleBorder() {
         
-        let border = CALayer()
-        let width = CGFloat(2.0)
-        border.borderColor = UIColor.white.cgColor
-        border.borderWidth = width
-        border.cornerRadius = 5
-        
-        layer.addSublayer(border)
-        layer.masksToBounds = true
+        layer.cornerRadius = 3
+        layer.borderWidth = 0.25
+        layer.borderColor = UIColor.white.cgColor
     }
+}
+
+
+extension UIView {
+    
+    enum fadeDirection {
+        case fadeIn
+        case fadeOut
+    }
+    
+    func fade(directon: fadeDirection) {
+        switch directon {
+        case .fadeIn:
+            UIView.animate(withDuration: 0.25, animations: {
+                self.alpha = 1.0
+            }, completion: nil)
+        case .fadeOut:
+            UIView.animate(withDuration: 0.25, animations: {
+                self.alpha = 0.0
+            }, completion: nil)
+        }
+    }
+    
 }

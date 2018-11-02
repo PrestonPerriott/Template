@@ -13,23 +13,26 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var recipeCollectionView: UICollectionView!
     private var controller = HomeController()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         controller.delegate = self
         setupCollectionView()
-        
+
         if let current = RealmService.shared.getCurrentUser() {
             print("The accessToken of our current user is : \(current.accessToken)")
         }
         
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         /// have controller reload data if date specifies its necessary
-        
+        controller.reloadData {
+            self.recipeCollectionView.reloadData()
+        }
     }
+    
 }
 
 extension HomeViewController: HomeControllerDelegate {

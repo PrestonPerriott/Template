@@ -90,6 +90,7 @@ extension NetworkService {
             return headers
         }
         headers["Authorization"] = user.accessToken
+        print("\n******THE HEADERS ARE :  \(headers)")
         return headers
     }
     ///Private allows access only from enclosing declaration & any extension in the same source file
@@ -116,6 +117,7 @@ extension NetworkService {
         } catch {
             ///Need to make an error class 
             print("Our error trying to decode the res obj is: \(error)")
+            print("The blob object looks like : \(JSON.init(data))")
             self.compltetionHandler?(NetworkResults(err: error as NSError, res: nil))
         }
     }

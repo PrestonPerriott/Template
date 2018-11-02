@@ -8,6 +8,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import SVProgressHUD
 
 class LoginViewController: UIViewController {
 
@@ -27,7 +28,7 @@ class LoginViewController: UIViewController {
         
         guiSetup()
         delegationSetUp()
-        usernameTextField.isHidden = true
+        usernameTextField.alpha = 0
         keyboard?.shouldResignOnTouchOutside = true
         keyboard?.preventShowingBottomBlankSpace = true
         initalConstant = passwordBottomConstraint.constant
@@ -63,22 +64,26 @@ class LoginViewController: UIViewController {
     @IBAction func didPressLoginButton(_ sender: UIButton) {
         switch sender.title(for: .normal) {
         case "Register":
+            SVProgressHUD.show()
             print("Pressed Register")
             controller.register(with: usernameTextField.text ?? "", email: emailTextfield.text ?? "", password: passwordTextfield.text ?? "", completion: {(result) in
                 if let err = result.err {
                     print("Our error is : \(err.localizedDescription)")
                 } else {
+                    SVProgressHUD.dismiss()
                     let mainCont = MainTabViewController()
                     self.present(mainCont, animated: true, completion: nil)
                 }
             })
             break
         case "Login":
+            SVProgressHUD.show()
             print("Pressed Login")
             controller.login(with: emailTextfield.text ?? "", password: passwordTextfield.text ?? "", completion: {(result) in
                 if let err = result.err {
                     print("Our error is : \(err.localizedDescription)")
                 } else {
+                    SVProgressHUD.dismiss()
                     let mainCont = MainTabViewController()
                     self.present(mainCont, animated: true, completion: nil)
                 }
@@ -98,7 +103,8 @@ extension LoginViewController: LoginControllerDelegate {
     
     @objc func tappedSegment(_ sender: UISegmentedControl) {
         loginButton.setTitle(registrationSegmentControl.titleForSegment(at: registrationSegmentControl.selectedSegmentIndex), for: .normal)
-        usernameTextField.isHidden = registrationSegmentControl.selectedSegmentIndex == 0 ? true : false
+        let direction: UIView.fadeDirection = registrationSegmentControl.selectedSegmentIndex == 0 ? .fadeOut : .fadeIn
+        usernameTextField.fade(directon: direction)
     }
     
     private func delegationSetUp() {

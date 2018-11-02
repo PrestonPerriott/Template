@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainTabViewController: UIViewController {
+class MainTabViewController: UINavigationController {
 
     let barController = UITabBarController()
     
@@ -27,6 +27,9 @@ extension MainTabViewController {
         let home = formNavController("Home", "HomeViewController", HomeViewController.self)
         home.tabBarItem.title = "Recipes"
         home.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
+        home.navigationBar.barTintColor = UIColor.black
+        home.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.systemFont(ofSize: 17)]
+        home.navigationBar.tintColor = UIColor.white
         
         barController.setViewControllers([home], animated: true)
         self.view.addSubview(barController.view)

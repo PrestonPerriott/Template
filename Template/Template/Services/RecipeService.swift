@@ -12,7 +12,15 @@ class RecipeService {
     
     class func getDailyRecipes(for category: String, completion: @escaping NetworkCompletion<[Recipe]>) {
         
-        let params = ["category": category]
-        NetworkService.init([Recipe].self).request(method: .get, path: EndPoints.home, params: params, complete: completion)
+        //let params = ["category": category]
+        NetworkService.init([Recipe].self).request(method: .get, path: EndPoints.home, params: nil, complete: completion)
+    }
+    
+    class func userPreviousCategory() -> String {
+        guard let user = RealmService.shared.getCurrentUser() else {
+            return ""
+        }
+        let category = user.previousCategory
+        return category
     }
 }

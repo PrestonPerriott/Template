@@ -42,8 +42,8 @@ class Recipe: Object, Codable {
     @objc dynamic var title = ""
     @objc dynamic var url = ""
     @objc dynamic var image = ""
-    @objc dynamic var calories = ""
-    @objc dynamic var totalTime = ""
+    @objc dynamic var calories = 0.0
+    @objc dynamic var totalTime = 0
     @objc dynamic var categories = ""
     @objc dynamic var ingredients = ""
     
@@ -68,8 +68,8 @@ class Recipe: Object, Codable {
         title = try container.decode(String.self, forKey: .title)
         url = try container.decode(String.self, forKey: .url)
         image = try container.decode(String.self, forKey: .image)
-        calories = try container.decode(String.self, forKey: .calories)
-        totalTime = try container.decode(String.self, forKey: .totalTime)
+        calories = try container.decode(Double.self, forKey: .calories)
+        totalTime = try container.decode(Int.self, forKey: .totalTime)
         
         let categoriesAry = try container.decode([String].self, forKey: .categories)
         for cat in categoriesAry{
@@ -91,5 +91,7 @@ class Recipe: Object, Codable {
         
         try container.encode(calories, forKey: .calories)
         try container.encode(totalTime, forKey: .totalTime)
+        try container.encode(categories, forKey: .categories)
+        try container.encode(ingredients, forKey: .ingredients)
     }
 }

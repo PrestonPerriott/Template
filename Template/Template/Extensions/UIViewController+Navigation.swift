@@ -14,8 +14,8 @@ extension UIViewController {
     func formNavController<T: UIViewController>( _ name: String, _ id: String, _ type: T.Type) -> UINavigationController {
         let controller: T = UIStoryboard(name: name , bundle: nil).instantiateViewController(withIdentifier: id) as! T
         let nav = UINavigationController(rootViewController: controller)
-        
-        
+        nav.navigationController?.navigationBar.backgroundColor = UIColor.black
+
        return nav
     }
 }

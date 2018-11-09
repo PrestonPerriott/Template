@@ -14,7 +14,7 @@ def sharedPods
     pod 'SwiftyJSON', '~> 4.0'
     pod 'Alamofire', '~> 4.7'
     pod 'SVProgressHUD'
-    pod 'LGSideMenuController'
+    pod 'MediumMenu'
     pod 'AlamofireNetworkActivityIndicator', '~> 2.2'
 end
 

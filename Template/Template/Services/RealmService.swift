@@ -57,7 +57,13 @@ class RealmService: NSObject {
     /// Deletes database
     func erase () throws {
         let realm = try RealmService.realm()
-        realm.deleteAll()
+        do {
+            realm.beginWrite()
+            realm.deleteAll()
+            try realm.commitWrite()
+        } catch {
+            realm.cancelWrite()
+        }
     }
     
     func save <T: User>(_ object: T) throws {

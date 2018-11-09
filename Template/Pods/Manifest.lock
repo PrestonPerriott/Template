@@ -4,7 +4,7 @@ PODS:
     - Alamofire (~> 4.7)
   - IQKeyboardManagerSwift (5.0.8)
   - KeychainSwift (11.0.0)
-  - LGSideMenuController (2.1.1)
+  - MediumMenu (1.2.0)
   - Realm (3.7.6):
     - Realm/Headers (= 3.7.6)
   - Realm/Headers (3.7.6)
@@ -19,7 +19,7 @@ DEPENDENCIES:
   - AlamofireNetworkActivityIndicator (~> 2.2)
   - IQKeyboardManagerSwift (~> 5.0.8)
   - KeychainSwift (~> 11.0)
-  - LGSideMenuController
+  - MediumMenu
   - RealmSwift (~> 3.7.6)
   - SVProgressHUD
   - SwiftLint
@@ -31,7 +31,7 @@ SPEC REPOS:
     - AlamofireNetworkActivityIndicator
     - IQKeyboardManagerSwift
     - KeychainSwift
-    - LGSideMenuController
+    - MediumMenu
     - Realm
     - RealmSwift
     - SVProgressHUD
@@ -43,13 +43,13 @@ SPEC CHECKSUMS:
   AlamofireNetworkActivityIndicator: aeac50e6ecb78ec71a5f1f29098bcf4ec2962910
   IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
   KeychainSwift: bea6bd9f98af7b8d7ca4aa79fe105c00fab532db
-  LGSideMenuController: ae40c80983ab8b8801c7cef0a6804d43aaa72d45
+  MediumMenu: ccae15abe7fc85d4cc0c5bbff48735607d6087f1
   Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
   RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 6e4f32505d6be3e82c38a91ec97ab3e440312de3
+PODFILE CHECKSUM: 8868da98fd71ea405ab22d91a77ced6deb28c12b
 
 COCOAPODS: 1.5.3

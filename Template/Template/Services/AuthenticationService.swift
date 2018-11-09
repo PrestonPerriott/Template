@@ -34,3 +34,7 @@ class AuthenticationService {
         try RealmService.shared.erase()
     }
 }
+
+extension Notification.Name {
+    static let appContextLogout = Notification.Name("appContextLogout")
+}

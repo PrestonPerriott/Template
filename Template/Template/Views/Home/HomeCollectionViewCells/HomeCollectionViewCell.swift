@@ -19,6 +19,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
     }
+    
     override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
         super.apply(layoutAttributes)
         

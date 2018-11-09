@@ -47,20 +47,21 @@ class HomeController: NSObject {
         }
         /// If theres already a documentated previousCategory return and don't hit API
         /// Instead find dailyRecipes from Realm
-        
-//        if (user.previousCategory != "") {
-//            if let savedRecipes = (RealmService.shared.getDailyRecipes())
-//                {
-//                    recipes = Array(savedRecipes)
-//                }
-//                group.leave()
-//                return
-//        } else {
-//        /// Else hit the API for the recipes and save the category
-//
-//        }
-        
-            
+        print("Our users prev category : \(user.previousCategory)")
+        if (user.previousCategory != "") {
+            /// For this logic to work, we would need to save the updated prevCat to realm but mongo also
+            if let savedRecipes = (RealmService.shared.getDailyRecipes())
+                {
+                    recipes = Array(savedRecipes)
+                }
+                group.leave()
+                group.notify(queue: .main) {
+                    print("Reloaded data from Realm")
+                    complete()
+                }
+                return
+        } else {
+        /// Else hit the API for the recipes and save the category
             RecipeService.getDailyRecipes(for: randomCategory.rawValue, completion: {(results) in
                 if let returnedRecipes = results.res {
                     //self.recipes = returnedRecipes
@@ -72,6 +73,9 @@ class HomeController: NSObject {
                         try RealmService.shared.updateUserField(field: User.CodingKeys.previousCategory, with: self.randomCategory.rawValue)
                         try RealmService.shared.saveDailyRecipes(list)
                         print("Updated \n \(list)")
+                        let obj =  RealmService.shared.getDailyRecipes()
+                        let updatedU = RealmService.shared.getCurrentUser()
+                        print("Retrieved recipes from Realm : \(String(describing: obj)) \n For updated user obj : \(String(describing: updatedU))")
                         self.recipes = returnedRecipes
                     } catch {
                         print("Error saving recipes to DB")
@@ -80,7 +84,7 @@ class HomeController: NSObject {
                     let err = NSError(domain: "Unknown connection err", code: 300, userInfo: nil)
                     print(err)
                 }
-
+                
                 SVProgressHUD.dismiss()
                 group.leave()
                 group.notify(queue: .main) {
@@ -88,7 +92,8 @@ class HomeController: NSObject {
                     complete()
                 }
             })
-        
+
+        }
         
     }
 }

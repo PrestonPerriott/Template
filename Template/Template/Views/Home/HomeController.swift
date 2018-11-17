@@ -20,13 +20,21 @@ class HomeController: NSObject {
     private var recipes = [Recipe]()
     private var didGetDaily: Bool = false
     private var randomCategory: HomeRecipeCategoryType = .healthy
+    private var previousCategory: HomeRecipeCategoryType.RawValue {
+        var category = ""
+        guard let user = RealmService.shared.getCurrentUser() else {
+            return category
+        }
+        /// Essentially if new user pick random item from our cateogry types
+        if (user.previousCategory == "") {
+            category = HomeRecipeCategoryType.random().rawValue
+        } else {
+            category = user.previousCategory
+        }
+        print("Our retrunes category is \(category)")
+        return category
+    }
     private var currentUser: User?
-    
-    ///For now we randomize the search query
-    ///In the future we'll want to save the last 10 past queries so we don't
-    //keep showing the user data they've just seen.
-    
-    ///Or Slowly pool a list of all the different categories to choose from
     
     public func registerRecipeCells(recipeCollectionView: UICollectionView)
         {
@@ -38,63 +46,55 @@ class HomeController: NSObject {
         SVProgressHUD.show()
         let group = DispatchGroup()
         group.enter()
-        ///Search Realm for saved Daily recipes before making call
-        ///Search realm for last saved category and choose other
-        guard let user = RealmService.shared.getCurrentUser() else {
-            SVProgressHUD.dismiss()
-            group.leave()
-            return
-        }
-        /// If theres already a documentated previousCategory return and don't hit API
-        /// Instead find dailyRecipes from Realm
-        print("Our users prev category : \(user.previousCategory)")
-        if (user.previousCategory != "") {
-            /// For this logic to work, we would need to save the updated prevCat to realm but mongo also
-            if let savedRecipes = (RealmService.shared.getDailyRecipes())
-                {
-                    recipes = Array(savedRecipes)
-                }
-                group.leave()
-                group.notify(queue: .main) {
-                    print("Reloaded data from Realm")
-                    complete()
-                }
-                return
-        } else {
-        /// Else hit the API for the recipes and save the category
-            RecipeService.getDailyRecipes(for: randomCategory.rawValue, completion: {(results) in
-                if let returnedRecipes = results.res {
-                    //self.recipes = returnedRecipes
-                    let list = List<Recipe>()
-                    for recipe in returnedRecipes {
-                        list.append(recipe)
-                    }
-                    do {
-                        try RealmService.shared.updateUserField(field: User.CodingKeys.previousCategory, with: self.randomCategory.rawValue)
-                        try RealmService.shared.saveDailyRecipes(list)
-                        print("Updated \n \(list)")
-                        let obj =  RealmService.shared.getDailyRecipes()
-                        let updatedU = RealmService.shared.getCurrentUser()
-                        print("Retrieved recipes from Realm : \(String(describing: obj)) \n For updated user obj : \(String(describing: updatedU))")
-                        self.recipes = returnedRecipes
-                    } catch {
-                        print("Error saving recipes to DB")
-                    }
-                } else {
-                    let err = NSError(domain: "Unknown connection err", code: 300, userInfo: nil)
-                    print(err)
-                }
-                
+        
+        /// For this logic to work, we would need to save the updated prevCat to realm but mongo also
+        if let savedRecipes = (RealmService.shared.getDailyRecipes()) {
+            if (savedRecipes.count > 0) {
+                recipes = Array(savedRecipes)
+                print("Realm data is \(savedRecipes)")
                 SVProgressHUD.dismiss()
                 group.leave()
                 group.notify(queue: .main) {
-                    print("Reloaded data")
+                    print("Reloaded data from Realm")
+                    print(self.previousCategory)
                     complete()
                 }
-            })
-
-        }
-        
+            } else {
+                /// Else hit the API for a random w/ a randome recipes cat and save the category & recipe
+                RecipeService.getDailyRecipes(for: self.previousCategory, completion: {(results) in
+                    if let returnedRecipes = results.res {
+                        
+                        let list = List<Recipe>()
+                        for recipe in returnedRecipes {
+                            list.append(recipe)
+                        }
+                        do {
+                            try RealmService.shared.saveDailyRecipes(list)
+                            try RealmService.shared.updateUserField(field: User.CodingKeys.previousCategory, with: self.previousCategory)
+                            /// Could get time of this request, and then check againt current date 
+                            self.recipes = returnedRecipes
+                        } catch {
+                            print("Error saving recipes to DB")
+                        }
+                    } else {
+                        let err = NSError(domain: "Unknown connection err", code: 300, userInfo: nil)
+                        print(err)
+                    }
+                    
+                    SVProgressHUD.dismiss()
+                    group.leave()
+                    group.notify(queue: .main) {
+                        print("Reloaded data")
+                        complete()
+                    }
+                })
+            }
+            
+        } else {
+            
+            /// Larger problem on my hands
+            
+/**/     }
     }
 }
 

@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if AuthenticationService.isLoggedIn() {
             main = MainTabViewController()
         } else {
-            main = LoginViewController()
+            main = UIStoryboard(name: "Login" , bundle: nil).instantiateViewController(withIdentifier: "LoginViewController")
         }
         return main
     }
@@ -31,9 +31,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SVProgressHUD.setDefaultStyle(.light)
         SVProgressHUD.setDefaultAnimationType(.flat)
         registerNotifications()
-        
+        disolve(with: entryPoint)
         
         return true
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        disolve(with: entryPoint)
     }
 }
 
@@ -57,8 +61,7 @@ extension AppDelegate {
         guard let window = UIApplication.shared.keyWindow, let rootVC = window.rootViewController else {
             return
         }
-        
-        
+    
         let vc = viewController
         vc.view.frame = rootVC.view.frame
         vc.view.layoutIfNeeded()

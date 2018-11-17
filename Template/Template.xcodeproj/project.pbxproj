@@ -20,9 +20,14 @@
 		831466172183A90A00F7B85E /* HomeCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831466162183A90A00F7B85E /* HomeCollectionViewLayout.swift */; };
 		831695E7217141010071C3A5 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831695E6217141010071C3A5 /* AuthenticationService.swift */; };
 		831695E92174D7D20071C3A5 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831695E82174D7D20071C3A5 /* UIButton+Style.swift */; };
+		8327707B219FECB600EB622F /* UIView+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8327707A219FECB600EB622F /* UIView+Style.swift */; };
 		834D5DAE2159DE40001614CD /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D5DAD2159DE40001614CD /* RealmService.swift */; };
 		834D5DB12159E4F3001614CD /* CompletionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D5DB02159E4F3001614CD /* CompletionHelper.swift */; };
 		834D5DB4215AD414001614CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D5DB3215AD414001614CD /* User.swift */; };
+		835391E42199D17600648562 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835391E32199D17600648562 /* Calculator.storyboard */; };
+		835391E62199D18F00648562 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835391E52199D18F00648562 /* CalculatorViewController.swift */; };
+		835391E82199D1BF00648562 /* CalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835391E72199D1BF00648562 /* CalculatorController.swift */; };
+		835391EE219A26C400648562 /* CircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835391ED219A26C400648562 /* CircularSlider.swift */; };
 		835C362C216B21A900A94A52 /* NetworkCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835C362B216B21A900A94A52 /* NetworkCompletion.swift */; };
 		835C362E216B22E800A94A52 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835C362D216B22E800A94A52 /* NetworkService.swift */; };
 		835C363E216EC2FE00A94A52 /* Ecodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835C363D216EC2FE00A94A52 /* Ecodable+Dictionary.swift */; };
@@ -66,9 +71,14 @@
 		831466162183A90A00F7B85E /* HomeCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewLayout.swift; sourceTree = "<group>"; };
 		831695E6217141010071C3A5 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		831695E82174D7D20071C3A5 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
+		8327707A219FECB600EB622F /* UIView+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Style.swift"; sourceTree = "<group>"; };
 		834D5DAD2159DE40001614CD /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		834D5DB02159E4F3001614CD /* CompletionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHelper.swift; sourceTree = "<group>"; };
 		834D5DB3215AD414001614CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		835391E32199D17600648562 /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
+		835391E52199D18F00648562 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		835391E72199D1BF00648562 /* CalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorController.swift; sourceTree = "<group>"; };
+		835391ED219A26C400648562 /* CircularSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSlider.swift; sourceTree = "<group>"; };
 		835C362B216B21A900A94A52 /* NetworkCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCompletion.swift; sourceTree = "<group>"; };
 		835C362D216B22E800A94A52 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		835C363D216EC2FE00A94A52 /* Ecodable+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ecodable+Dictionary.swift"; sourceTree = "<group>"; };
@@ -161,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				836ECB1F2158ACB100B6AA20 /* FloatTextField.swift */,
+				835391ED219A26C400648562 /* CircularSlider.swift */,
 			);
 			path = Supplementary;
 			sourceTree = "<group>";
@@ -176,6 +187,9 @@
 		83146618218C126600F7B85E /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				835391E32199D17600648562 /* Calculator.storyboard */,
+				835391E52199D18F00648562 /* CalculatorViewController.swift */,
+				835391E72199D1BF00648562 /* CalculatorController.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -281,6 +295,7 @@
 				835C363D216EC2FE00A94A52 /* Ecodable+Dictionary.swift */,
 				831695E82174D7D20071C3A5 /* UIButton+Style.swift */,
 				830CD6782180C79A003C91A9 /* UIViewController+Navigation.swift */,
+				8327707A219FECB600EB622F /* UIView+Style.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -383,6 +398,7 @@
 				836ECB0521581CF100B6AA20 /* LaunchScreen.storyboard in Resources */,
 				836ECB0221581CF100B6AA20 /* Assets.xcassets in Resources */,
 				836ECB0021581CF100B6AA20 /* Login.storyboard in Resources */,
+				835391E42199D17600648562 /* Calculator.storyboard in Resources */,
 				830CD66B218019DE003C91A9 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,11 +492,14 @@
 			files = (
 				830CD6772180BA63003C91A9 /* MainTabViewController.swift in Sources */,
 				835C362E216B22E800A94A52 /* NetworkService.swift in Sources */,
+				835391E62199D18F00648562 /* CalculatorViewController.swift in Sources */,
 				836ECB232158AD9400B6AA20 /* LoginViewController.swift in Sources */,
+				8327707B219FECB600EB622F /* UIView+Style.swift in Sources */,
 				834D5DAE2159DE40001614CD /* RealmService.swift in Sources */,
 				831695E7217141010071C3A5 /* AuthenticationService.swift in Sources */,
 				831695E92174D7D20071C3A5 /* UIButton+Style.swift in Sources */,
 				830CD673218022BD003C91A9 /* HomeCollectionViewCell.swift in Sources */,
+				835391E82199D1BF00648562 /* CalculatorController.swift in Sources */,
 				836ECAFB21581CF100B6AA20 /* AppDelegate.swift in Sources */,
 				836ECB202158ACB100B6AA20 /* FloatTextField.swift in Sources */,
 				831466172183A90A00F7B85E /* HomeCollectionViewLayout.swift in Sources */,
@@ -495,6 +514,7 @@
 				834D5DB12159E4F3001614CD /* CompletionHelper.swift in Sources */,
 				835C363E216EC2FE00A94A52 /* Ecodable+Dictionary.swift in Sources */,
 				836ECB2721597EDC00B6AA20 /* LoginController.swift in Sources */,
+				835391EE219A26C400648562 /* CircularSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

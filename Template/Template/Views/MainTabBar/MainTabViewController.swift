@@ -34,9 +34,13 @@ extension MainTabViewController {
         home.navigationBar.topItem?.title = "Recipes"
         home.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .done, target: self, action: #selector(showMenu))
         
+        let calc = formNavController("Calculator", "CalculatorViewController", CalculatorViewController.self)
+        calc.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 1)
+        calc.navigationBar.topItem?.title = "Recipes"
+        calc.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .done, target: self, action: #selector(showMenu))
         
         setUpMenu()
-        barController.setViewControllers([home], animated: true)
+        barController.setViewControllers([home, calc], animated: true)
         self.view.addSubview(barController.view)
     }
     
@@ -52,6 +56,8 @@ extension MainTabViewController {
                 switch options[item] {
                 case _ where options[item] == "Home" :
                     print("Hit Home")
+                    let cont = CalculatorViewController()
+                    self.present(cont, animated: true, completion: nil)
                 case _ where options[item] == "Profile":
                     print("Hit profile")
                 case _ where options[item] == "Settings":

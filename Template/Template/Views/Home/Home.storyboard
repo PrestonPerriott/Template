@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aux-JQ-sZ9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aux-JQ-sZ9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DTC-oT-v5s">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DTC-oT-v5s">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <collectionViewLayout key="collectionViewLayout" id="Yh6-sc-fhk" customClass="HomeCollectionViewLayout" customModule="Template" customModuleProvider="target"/>
                                 <cells/>
@@ -27,10 +27,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="DTC-oT-v5s" secondAttribute="bottom" id="0WO-DS-hud"/>
-                            <constraint firstItem="DTC-oT-v5s" firstAttribute="leading" secondItem="dlD-ki-qM2" secondAttribute="leading" id="SEi-XC-gSS"/>
-                            <constraint firstItem="DTC-oT-v5s" firstAttribute="trailing" secondItem="dlD-ki-qM2" secondAttribute="trailing" id="Wtu-JQ-sxG"/>
-                            <constraint firstItem="DTC-oT-v5s" firstAttribute="top" secondItem="dlD-ki-qM2" secondAttribute="top" id="y1U-Ov-sJI"/>
+                            <constraint firstItem="DTC-oT-v5s" firstAttribute="top" secondItem="4LP-Nl-yv6" secondAttribute="top" id="Gu8-yd-not"/>
+                            <constraint firstItem="DTC-oT-v5s" firstAttribute="leading" secondItem="dlD-ki-qM2" secondAttribute="leading" id="Pml-XU-3Jh"/>
+                            <constraint firstItem="DTC-oT-v5s" firstAttribute="trailing" secondItem="dlD-ki-qM2" secondAttribute="trailing" id="hZL-aD-9ke"/>
+                            <constraint firstItem="DTC-oT-v5s" firstAttribute="bottom" secondItem="dlD-ki-qM2" secondAttribute="bottom" id="kRX-gR-WeC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dlD-ki-qM2"/>
                     </view>

@@ -38,7 +38,7 @@ class HomeCollectionViewLayout: UICollectionViewLayout {
     }
     
     var height: CGFloat {
-        return collectionView!.bounds.width
+        return collectionView!.bounds.height
     }
     
     var numberOfCells: Int {

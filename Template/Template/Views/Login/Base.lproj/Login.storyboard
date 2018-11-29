@@ -21,22 +21,20 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nyc" translatesAutoresizingMaskIntoConstraints="NO" id="3NG-XS-1Bn">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <visualEffectView opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6CI-Ll-rJu">
+                            <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6CI-Ll-rJu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xCo-lu-m5X">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CD4-NR-zTD">
+                                        <visualEffectView opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CD4-NR-zTD">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="91e-7X-ewj">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
-                                            <vibrancyEffect>
-                                                <blurEffect style="light"/>
-                                            </vibrancyEffect>
+                                            <blurEffect style="dark"/>
                                         </visualEffectView>
                                     </subviews>
                                 </view>
@@ -53,7 +51,6 @@
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ej6-Ic-T3B">
                                 <rect key="frame" x="75" y="214" width="225" height="29"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <segments>
                                     <segment title="Login"/>
                                     <segment title="Register"/>
@@ -100,10 +97,18 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Av-uA-uzt">
-                                <rect key="frame" x="75" y="582" width="225" height="34"/>
+                                <rect key="frame" x="-2" y="580" width="379" height="87"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1Av-uA-uzt" secondAttribute="height" multiplier="375:86" id="X9q-KC-esQ"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Login"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didPressLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kDQ-IY-5xD"/>
                                 </connections>
@@ -116,15 +121,15 @@
                             <constraint firstAttribute="bottom" secondItem="3NG-XS-1Bn" secondAttribute="bottom" id="5Pg-gV-sjL"/>
                             <constraint firstItem="Ej6-Ic-T3B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Lt-Cf-ac5"/>
                             <constraint firstItem="j5z-dh-X9d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="7cw-Tz-V2J"/>
-                            <constraint firstItem="1Av-uA-uzt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="9vx-6v-Cbz"/>
+                            <constraint firstItem="1Av-uA-uzt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-2" id="9vx-6v-Cbz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j5z-dh-X9d" secondAttribute="trailing" constant="75" id="FYT-Ng-30U"/>
                             <constraint firstItem="o9Z-oQ-Aiz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="900" constant="462" id="HB1-2U-cSi"/>
                             <constraint firstItem="FyK-Qc-RqD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="IGt-nz-f9G"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3NG-XS-1Bn" secondAttribute="trailing" id="JZQ-7R-Smu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Av-uA-uzt" secondAttribute="bottom" constant="51" id="O1v-4C-XJL"/>
+                            <constraint firstAttribute="bottom" secondItem="1Av-uA-uzt" secondAttribute="bottom" id="O1v-4C-XJL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o9Z-oQ-Aiz" secondAttribute="trailing" constant="75" id="ON0-ek-EZt"/>
                             <constraint firstItem="3NG-XS-1Bn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Og4-sC-9u2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Av-uA-uzt" secondAttribute="trailing" constant="75" id="T74-ol-DyG"/>
+                            <constraint firstAttribute="trailing" secondItem="1Av-uA-uzt" secondAttribute="trailing" constant="-2" id="T74-ol-DyG"/>
                             <constraint firstItem="6CI-Ll-rJu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TJG-AW-XmU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ej6-Ic-T3B" secondAttribute="trailing" constant="75" id="Whx-6q-7gj"/>
                             <constraint firstItem="o9Z-oQ-Aiz" firstAttribute="top" secondItem="j5z-dh-X9d" secondAttribute="bottom" constant="8" id="b9s-Yi-k7o"/>

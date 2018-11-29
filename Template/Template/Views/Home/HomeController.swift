@@ -12,6 +12,7 @@ import UIKit
 import SVProgressHUD
 
 protocol HomeControllerDelegate: class {
+    func didSelectRecipe(recipe: Recipe)
 }
 
 class HomeController: NSObject {
@@ -109,11 +110,11 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.recipeImageView.image = UIImage(data: try! Data(contentsOf: URL(string: recipes[indexPath.item].image)!))
         cell.recipeTitle.text = recipes[indexPath.item].title
         cell.caloriesLabel.text = String(format: "%.0f", recipes[indexPath.item].calories) + " calories"
-        print(recipes[indexPath.item])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        delegate?.didSelectRecipe(recipe: recipes[indexPath.item])
     }
 }

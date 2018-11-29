@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Recipe Detail View Controller-->
+        <scene sceneID="qiM-cB-Ibt">
+            <objects>
+                <viewController restorationIdentifier="RecipeDetailViewController" storyboardIdentifier="RecipeDetailViewController" id="pB4-mR-bcH" customClass="RecipeDetailViewController" customModule="Template" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ysx-2Q-zCG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="JOF-tP-yYu">
+                                <rect key="frame" x="0.0" y="-5" width="375" height="1205"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37W-ro-4uU" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1368"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fda-Zo-278">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                                <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="1qQ-7T-85i"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9N-eh-ayN">
+                                                <rect key="frame" x="61" y="389" width="253" height="75"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 min." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L94-lF-pjQ">
+                                                        <rect key="frame" x="8" y="31" width="237" height="22.5"/>
+                                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cook Time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TjF-hn-Jlz">
+                                                        <rect key="frame" x="8" y="0.0" width="237" height="29"/>
+                                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="13"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="L94-lF-pjQ" firstAttribute="centerX" secondItem="a9N-eh-ayN" secondAttribute="centerX" id="5Sx-ns-jdK"/>
+                                                    <constraint firstItem="L94-lF-pjQ" firstAttribute="centerY" secondItem="a9N-eh-ayN" secondAttribute="centerY" constant="5" id="8Yi-AU-e5Y"/>
+                                                    <constraint firstAttribute="trailing" secondItem="TjF-hn-Jlz" secondAttribute="trailing" constant="8" id="Bqf-RA-4HT"/>
+                                                    <constraint firstItem="L94-lF-pjQ" firstAttribute="leading" secondItem="a9N-eh-ayN" secondAttribute="leading" constant="8" id="Lu8-Ca-8aS"/>
+                                                    <constraint firstItem="L94-lF-pjQ" firstAttribute="top" secondItem="TjF-hn-Jlz" secondAttribute="bottom" constant="2" id="a45-V1-Oeu"/>
+                                                    <constraint firstItem="TjF-hn-Jlz" firstAttribute="leading" secondItem="a9N-eh-ayN" secondAttribute="leading" constant="8" id="cjE-0R-FC3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="L94-lF-pjQ" secondAttribute="trailing" constant="8" id="e8O-KD-Tmq"/>
+                                                    <constraint firstAttribute="height" constant="75" id="jhF-50-TsI"/>
+                                                    <constraint firstItem="TjF-hn-Jlz" firstAttribute="top" secondItem="a9N-eh-ayN" secondAttribute="top" id="x1X-ot-QkE"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcM-uM-EFL">
+                                                <rect key="frame" x="15" y="524" width="345" height="210"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hZS-2Q-epa">
+                                                        <rect key="frame" x="10" y="0.0" width="325" height="210"/>
+                                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+                                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="15"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="6"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="rect" keyPath="padding">
+                                                                <rect key="value" x="0.0" y="25" width="25" height="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="hZS-2Q-epa" firstAttribute="leading" secondItem="jcM-uM-EFL" secondAttribute="leading" constant="10" id="1i3-uE-bp3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hZS-2Q-epa" secondAttribute="trailing" constant="10" id="CZ5-Ej-Jb3"/>
+                                                    <constraint firstItem="hZS-2Q-epa" firstAttribute="top" secondItem="jcM-uM-EFL" secondAttribute="top" id="Z6a-0s-ct2"/>
+                                                    <constraint firstAttribute="bottom" secondItem="hZS-2Q-epa" secondAttribute="bottom" id="hlr-b7-gxy"/>
+                                                    <constraint firstItem="hZS-2Q-epa" firstAttribute="centerX" secondItem="jcM-uM-EFL" secondAttribute="centerX" id="vMc-JN-jEZ"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3q-IJ-fIr">
+                                                <rect key="frame" x="20" y="494" width="155" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="Gd2-5t-qGx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="16"/>
+                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <tableView clipsSubviews="YES" alpha="0.84999999999999998" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q0r-lK-wnY">
+                                                <rect key="frame" x="20" y="819" width="335" height="175"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="175" id="x3e-jr-Yje"/>
+                                                </constraints>
+                                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="separatorInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="qk3-5t-apE">
+                                                        <rect key="frame" x="0.0" y="28" width="335" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qk3-5t-apE" id="5XR-Mb-q1v">
+                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                        <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.5"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </tableViewCell>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pPo-kQ-crm">
+                                                        <rect key="frame" x="0.0" y="72" width="335" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pPo-kQ-crm" id="XQN-2h-WHy">
+                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="04l-Ol-djd">
+                                                        <rect key="frame" x="0.0" y="116" width="335" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="04l-Ol-djd" id="44o-rv-Jxu">
+                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                                <sections/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </tableView>
+                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QS8-nT-SUv">
+                                                <rect key="frame" x="15" y="1054" width="345" height="294"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FSb-Xi-DcR">
+                                                        <rect key="frame" x="10" y="0.0" width="325" height="294"/>
+                                                        <string key="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</string>
+                                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="15"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="6"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="FSb-Xi-DcR" secondAttribute="bottom" id="EJ9-AZ-9j9"/>
+                                                    <constraint firstItem="FSb-Xi-DcR" firstAttribute="leading" secondItem="QS8-nT-SUv" secondAttribute="leading" constant="10" id="FkZ-Sl-qoa"/>
+                                                    <constraint firstItem="FSb-Xi-DcR" firstAttribute="centerX" secondItem="QS8-nT-SUv" secondAttribute="centerX" id="chr-Az-uUa"/>
+                                                    <constraint firstAttribute="trailing" secondItem="FSb-Xi-DcR" secondAttribute="trailing" constant="10" id="pcc-K4-Mhw"/>
+                                                    <constraint firstItem="FSb-Xi-DcR" firstAttribute="top" secondItem="QS8-nT-SUv" secondAttribute="top" id="xZf-MA-8XF"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pC3-xf-1ub">
+                                                <rect key="frame" x="10" y="320" width="355" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Title " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d67-4w-8yf">
+                                                        <rect key="frame" x="5" y="5" width="345" height="40"/>
+                                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="d67-4w-8yf" firstAttribute="centerY" secondItem="pC3-xf-1ub" secondAttribute="centerY" id="IdX-Lp-gRb"/>
+                                                    <constraint firstItem="d67-4w-8yf" firstAttribute="centerX" secondItem="pC3-xf-1ub" secondAttribute="centerX" id="Kbl-gU-vbd"/>
+                                                    <constraint firstItem="d67-4w-8yf" firstAttribute="leading" secondItem="pC3-xf-1ub" secondAttribute="leading" constant="5" id="Kio-RE-IsX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="d67-4w-8yf" secondAttribute="trailing" constant="5" id="P43-lH-oAb"/>
+                                                    <constraint firstItem="d67-4w-8yf" firstAttribute="top" secondItem="pC3-xf-1ub" secondAttribute="top" constant="5" id="RlB-5Y-gRo"/>
+                                                    <constraint firstAttribute="height" constant="50" id="UJC-ZR-OFI"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzT-FS-5Ic">
+                                                <rect key="frame" x="20" y="789" width="155" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="FOd-ve-ZvE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="16"/>
+                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LoB-Bh-30G">
+                                                <rect key="frame" x="20" y="1024" width="155" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="y7B-Hn-M6j"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="16"/>
+                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Or7-bo-ody">
+                                                <rect key="frame" x="20" y="372" width="335" height="1"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="0.75" id="hf0-IO-4iG"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwB-Eo-Ouq">
+                                                <rect key="frame" x="15" y="40" width="60" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="cSb-AU-3tw"/>
+                                                </constraints>
+                                                <state key="normal" title="Back">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pressedBackButton:" destination="pB4-mR-bcH" eventType="touchUpInside" id="Evh-ye-WzA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Or7-bo-ody" secondAttribute="trailing" constant="20" id="0uv-qi-LVg"/>
+                                            <constraint firstItem="Q0r-lK-wnY" firstAttribute="top" secondItem="KzT-FS-5Ic" secondAttribute="bottom" constant="5" id="2yS-AZ-lBe"/>
+                                            <constraint firstItem="QS8-nT-SUv" firstAttribute="top" secondItem="LoB-Bh-30G" secondAttribute="bottom" constant="5" id="36a-xw-AVj"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fda-Zo-278" secondAttribute="trailing" id="42D-RU-tPb"/>
+                                            <constraint firstItem="Fda-Zo-278" firstAttribute="leading" secondItem="37W-ro-4uU" secondAttribute="leading" id="52o-bx-pfV"/>
+                                            <constraint firstItem="pC3-xf-1ub" firstAttribute="top" secondItem="Fda-Zo-278" secondAttribute="bottom" constant="20" id="86O-9x-kYH"/>
+                                            <constraint firstItem="Fda-Zo-278" firstAttribute="top" secondItem="37W-ro-4uU" secondAttribute="top" id="BRq-HM-knr"/>
+                                            <constraint firstAttribute="trailing" secondItem="LoB-Bh-30G" secondAttribute="trailing" constant="200" id="HPe-0y-mW4"/>
+                                            <constraint firstItem="Q0r-lK-wnY" firstAttribute="leading" secondItem="37W-ro-4uU" secondAttribute="leading" constant="20" id="HmR-gS-sTy"/>
+                                            <constraint firstItem="KzT-FS-5Ic" firstAttribute="leading" secondItem="37W-ro-4uU" secondAttribute="leading" constant="20" id="Hs4-JB-3dT"/>
+                                            <constraint firstItem="NwB-Eo-Ouq" firstAttribute="leading" secondItem="37W-ro-4uU" secondAttribute="leading" constant="15" id="L7h-QI-TNj"/>
+                                            <constraint firstItem="pC3-xf-1ub" firstAttribute="leading" secondItem="37W-ro-4uU" secondAttribute="leading" constant="10" id="MKh-Bd-6uU"/>
+                                            <constraint firstAttribute="trailing" secondItem="Q0r-lK-wnY" secondAttribute="trailing" constant="20" id="N38-Fd-cHt"/>
+                                            <constraint firstItem="f3q-IJ-fIr" firstAttribute="leading" secondItem="37W-ro-4uU" secondAttribute="leading" constant="20" id="OIf-zi-rQf"/>
+                                            <constraint firstItem="jcM-uM-EFL" firstAttribute="top" secondItem="f3q-IJ-fIr" secondAttribute="bottom" constant="5" id="OOn-Qk-5kj"/>
+                                            <constraint firstItem="QS8-nT-SUv" firstAttribute="leading" secondItem="37W-ro-4uU" secondAttribute="leading" constant="15" id="SdT-qH-SG8"/>
+                                            <constraint firstAttribute="trailing" secondItem="jcM-uM-EFL" secondAttribute="trailing" constant="15" id="TMr-2Q-krI"/>
+                                            <constraint firstItem="a9N-eh-ayN" firstAttribute="top" secondItem="Or7-bo-ody" secondAttribute="bottom" constant="16" id="TUA-6j-Z0y"/>
+                                            <constraint firstItem="LoB-Bh-30G" firstAttribute="top" secondItem="Q0r-lK-wnY" secondAttribute="bottom" constant="30" id="Ua4-KX-zdb"/>
+                                            <constraint firstItem="NwB-Eo-Ouq" firstAttribute="top" secondItem="37W-ro-4uU" secondAttribute="top" constant="40" id="V2J-hF-phS"/>
+                                            <constraint firstItem="Or7-bo-ody" firstAttribute="leading" secondItem="37W-ro-4uU" secondAttribute="leading" constant="20" id="Ww6-QP-5bj"/>
+                                            <constraint firstAttribute="trailing" secondItem="KzT-FS-5Ic" secondAttribute="trailing" constant="200" id="Ygz-uG-RYm"/>
+                                            <constraint firstAttribute="trailing" secondItem="f3q-IJ-fIr" secondAttribute="trailing" constant="200" id="c8e-HF-g3f"/>
+                                            <constraint firstAttribute="trailing" secondItem="QS8-nT-SUv" secondAttribute="trailing" constant="15" id="cSQ-OP-QWQ"/>
+                                            <constraint firstItem="KzT-FS-5Ic" firstAttribute="top" secondItem="jcM-uM-EFL" secondAttribute="bottom" constant="55" id="fnk-qd-XTn"/>
+                                            <constraint firstAttribute="trailing" secondItem="a9N-eh-ayN" secondAttribute="trailing" constant="61" id="itN-Cx-TeL"/>
+                                            <constraint firstItem="LoB-Bh-30G" firstAttribute="leading" secondItem="37W-ro-4uU" secondAttribute="leading" constant="20" id="lIn-n5-u0v"/>
+                                            <constraint firstAttribute="bottom" secondItem="QS8-nT-SUv" secondAttribute="bottom" constant="20" id="qy6-sk-0fw"/>
+                                            <constraint firstItem="f3q-IJ-fIr" firstAttribute="top" secondItem="a9N-eh-ayN" secondAttribute="bottom" constant="30" id="tJl-AT-PKX"/>
+                                            <constraint firstItem="a9N-eh-ayN" firstAttribute="leading" secondItem="37W-ro-4uU" secondAttribute="leading" constant="61" id="tNf-t1-B0u"/>
+                                            <constraint firstItem="jcM-uM-EFL" firstAttribute="leading" secondItem="37W-ro-4uU" secondAttribute="leading" constant="15" id="tbF-Ts-pML"/>
+                                            <constraint firstItem="Or7-bo-ody" firstAttribute="top" secondItem="pC3-xf-1ub" secondAttribute="bottom" constant="2" id="y3x-w2-U8A"/>
+                                            <constraint firstAttribute="trailing" secondItem="pC3-xf-1ub" secondAttribute="trailing" constant="10" id="ysD-1c-PY6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="37W-ro-4uU" secondAttribute="bottom" id="PY6-fU-9mz"/>
+                                    <constraint firstItem="37W-ro-4uU" firstAttribute="width" secondItem="JOF-tP-yYu" secondAttribute="width" id="STI-ZL-WF8"/>
+                                    <constraint firstItem="37W-ro-4uU" firstAttribute="top" secondItem="JOF-tP-yYu" secondAttribute="top" id="Sua-bC-zSU"/>
+                                    <constraint firstItem="37W-ro-4uU" firstAttribute="height" secondItem="JOF-tP-yYu" secondAttribute="height" priority="250" id="VJc-Pc-gdh"/>
+                                    <constraint firstItem="37W-ro-4uU" firstAttribute="leading" secondItem="JOF-tP-yYu" secondAttribute="leading" id="WsM-yS-TY2"/>
+                                    <constraint firstAttribute="trailing" secondItem="37W-ro-4uU" secondAttribute="trailing" id="XX8-l1-cpG"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="JOF-tP-yYu" firstAttribute="leading" secondItem="hKz-4R-MKy" secondAttribute="leading" id="9eG-c8-Bum"/>
+                            <constraint firstItem="JOF-tP-yYu" firstAttribute="trailing" secondItem="hKz-4R-MKy" secondAttribute="trailing" id="CMB-k4-HkH"/>
+                            <constraint firstItem="JOF-tP-yYu" firstAttribute="bottom" secondItem="hKz-4R-MKy" secondAttribute="bottom" id="eBR-aL-bmH"/>
+                            <constraint firstItem="JOF-tP-yYu" firstAttribute="top" secondItem="Ysx-2Q-zCG" secondAttribute="top" constant="-5" id="rGR-cP-abF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hKz-4R-MKy"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="1200"/>
+                    <connections>
+                        <outlet property="backButton" destination="NwB-Eo-Ouq" id="YpX-ib-BB3"/>
+                        <outlet property="cookTimeView" destination="a9N-eh-ayN" id="0oW-JY-5tU"/>
+                        <outlet property="descriptionView" destination="jcM-uM-EFL" id="oIc-2A-89D"/>
+                        <outlet property="detailCookTimeLabel" destination="L94-lF-pjQ" id="8BJ-gl-YUn"/>
+                        <outlet property="detailDescriptionLabel" destination="hZS-2Q-epa" id="opO-1P-DNC"/>
+                        <outlet property="detailDirectionsLabel" destination="FSb-Xi-DcR" id="LV1-E2-05V"/>
+                        <outlet property="detailImageView" destination="Fda-Zo-278" id="gyf-8D-2bl"/>
+                        <outlet property="detailIngredientsTableView" destination="Q0r-lK-wnY" id="eIt-9N-WL1"/>
+                        <outlet property="detailScrollView" destination="JOF-tP-yYu" id="gb7-mv-jXX"/>
+                        <outlet property="detailTitle" destination="d67-4w-8yf" id="4pD-S1-BfE"/>
+                        <outlet property="directionsView" destination="QS8-nT-SUv" id="80M-sq-5c9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O2A-ee-IVd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="152.02398800599701"/>
+        </scene>
+    </scenes>
+</document>

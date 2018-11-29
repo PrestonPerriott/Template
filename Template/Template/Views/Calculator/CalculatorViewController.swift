@@ -31,7 +31,7 @@ class CalculatorViewController: UIViewController {
             view.layer.shadowColor = UIColor.black.cgColor
             view.layer.shadowOpacity = 1
             view.layer.shadowOffset = CGSize(width: 2, height: 2)
-            view.layer.shadowRadius = 5
+            view.layer.shadowRadius = 6
         }
     }
 }

@@ -65,7 +65,7 @@ extension AppDelegate {
         let vc = viewController
         vc.view.frame = rootVC.view.frame
         vc.view.layoutIfNeeded()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
+        UIView.transition(with: window, duration: 0.2, options: .transitionCrossDissolve, animations: {
             window.rootViewController = vc
         }, completion: { completed in
             print("Completed transition")

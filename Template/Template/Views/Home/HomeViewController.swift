@@ -22,7 +22,6 @@ class HomeViewController: UIViewController {
         if let current = RealmService.shared.getCurrentUser() {
             print("The accessToken of our current user is : \(current.accessToken)")
         }
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,7 +35,11 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: HomeControllerDelegate {
-    
+    func didSelectRecipe(recipe: Recipe) {
+        print("recipe selected")
+        let detailVC = RecipeDetailViewController.instantiate(with: recipe)
+        present(detailVC, animated: true, completion: nil)
+    }
 }
 
 extension HomeViewController {

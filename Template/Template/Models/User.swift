@@ -58,9 +58,5 @@ class User: Object, Codable {
 }
 
 extension User {
-    func isLoggedIn() -> Bool {
-        let realm = try RealmService.shared
-        
-        return false
-    }
+    
 }

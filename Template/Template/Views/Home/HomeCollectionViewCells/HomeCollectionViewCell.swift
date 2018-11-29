@@ -28,8 +28,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
         
         let delta = 1 - ((featHeight - frame.height) / (featHeight - regHeight))
         
-        let minAlpha: CGFloat = 0.3
-        let maxAlpha: CGFloat = 0.75
+        let minAlpha: CGFloat = 0.25
+        let maxAlpha: CGFloat = 0.70
         imageCoverView.alpha = maxAlpha - (delta * (maxAlpha - minAlpha))
         
         /// Scaling contents of cell

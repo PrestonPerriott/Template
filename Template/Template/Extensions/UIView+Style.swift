@@ -35,8 +35,8 @@ extension UIView {
         gradientLayer.colors = colorArray
         gradientLayer.frame = self.bounds
         gradientLayer.locations = [0.0, 0.4, 1.0]
-        gradientLayer.startPoint = CGPoint(x: 1, y: 1)
-        gradientLayer.endPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.startPoint = CGPoint(x: 0, y: 1)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
         print(gradientLayer.frame)
         self.layer.insertSublayer(gradientLayer, at: 0)
     }

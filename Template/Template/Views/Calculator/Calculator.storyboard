@@ -18,74 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mh2-la-bsI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
-                                <subviews>
-                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Wo-ZA-Nj5">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ry1-jZ-1be">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        </view>
-                                        <blurEffect style="light"/>
-                                    </visualEffectView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.17289327759441953" green="0.14090977181396028" blue="0.25868829040963037" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstItem="0Wo-ZA-Nj5" firstAttribute="top" secondItem="Mh2-la-bsI" secondAttribute="top" id="7FA-D5-Djy"/>
-                                    <constraint firstAttribute="trailing" secondItem="0Wo-ZA-Nj5" secondAttribute="trailing" id="FBi-sR-6Rh"/>
-                                    <constraint firstAttribute="bottom" secondItem="0Wo-ZA-Nj5" secondAttribute="bottom" id="ZYe-fX-jSm"/>
-                                    <constraint firstItem="0Wo-ZA-Nj5" firstAttribute="leading" secondItem="Mh2-la-bsI" secondAttribute="leading" id="q8W-4F-XYc"/>
-                                </constraints>
-                            </view>
-                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OqK-Lr-ZxJ">
-                                <rect key="frame" x="24" y="32" width="327" height="93.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Percent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkA-WA-8W4">
-                                        <rect key="frame" x="8" y="20" width="62" height="17"/>
-                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="12"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpI-ou-DdU">
-                                        <rect key="frame" x="144" y="20" width="39.5" height="17"/>
-                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="12"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3e-Pn-KaC">
-                                        <rect key="frame" x="257.5" y="20" width="61.5" height="17"/>
-                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="12"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="SpI-ou-DdU" firstAttribute="centerX" secondItem="OqK-Lr-ZxJ" secondAttribute="centerX" id="7Wf-cA-SWL"/>
-                                    <constraint firstAttribute="bottom" secondItem="SpI-ou-DdU" secondAttribute="bottom" constant="56.5" id="CcH-Lk-A2H"/>
-                                    <constraint firstItem="SpI-ou-DdU" firstAttribute="top" secondItem="OqK-Lr-ZxJ" secondAttribute="top" constant="20" id="PoL-D7-qQ1"/>
-                                    <constraint firstItem="HkA-WA-8W4" firstAttribute="leading" secondItem="OqK-Lr-ZxJ" secondAttribute="leading" constant="8" id="UEU-MP-qRq"/>
-                                    <constraint firstAttribute="trailing" secondItem="h3e-Pn-KaC" secondAttribute="trailing" constant="8" id="ZVm-3H-rzB"/>
-                                    <constraint firstAttribute="bottom" secondItem="HkA-WA-8W4" secondAttribute="bottom" constant="56.5" id="bjv-5P-evF"/>
-                                    <constraint firstAttribute="bottom" secondItem="h3e-Pn-KaC" secondAttribute="bottom" constant="56.5" id="m0r-Vw-iHl"/>
-                                    <constraint firstItem="SpI-ou-DdU" firstAttribute="leading" secondItem="HkA-WA-8W4" secondAttribute="trailing" constant="74" id="rlb-6a-cZ1"/>
-                                    <constraint firstItem="h3e-Pn-KaC" firstAttribute="leading" secondItem="SpI-ou-DdU" secondAttribute="trailing" constant="74" id="xqI-b3-a07"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <visualEffectView opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gnn-LR-K5H">
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gnn-LR-K5H">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="myA-gK-chF">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QYw-ZU-32n">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                            <rect key="frame" x="0.0" y="-20" width="375" height="647"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="ZfR-Dz-CXJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
@@ -101,18 +41,82 @@
                                     <blurEffect style="extraLight"/>
                                 </vibrancyEffect>
                             </visualEffectView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXd-na-aNe" userLabel="userValuesView">
-                                <rect key="frame" x="12" y="185.5" width="351" height="73"/>
+                            <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mh2-la-bsI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14.2353 * 43943% * (34.7g / 17)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeH-C6-D4Y">
-                                        <rect key="frame" x="0.0" y="0.0" width="351" height="73"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Wo-ZA-Nj5">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ry1-jZ-1be">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <vibrancyEffect>
+                                            <blurEffect style="light"/>
+                                        </vibrancyEffect>
+                                    </visualEffectView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="0Wo-ZA-Nj5" firstAttribute="top" secondItem="Mh2-la-bsI" secondAttribute="top" id="7FA-D5-Djy"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Wo-ZA-Nj5" secondAttribute="trailing" id="FBi-sR-6Rh"/>
+                                    <constraint firstAttribute="height" constant="50" id="Nra-Lj-5Q7"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Wo-ZA-Nj5" secondAttribute="bottom" id="ZYe-fX-jSm"/>
+                                    <constraint firstItem="0Wo-ZA-Nj5" firstAttribute="leading" secondItem="Mh2-la-bsI" secondAttribute="leading" id="q8W-4F-XYc"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OqK-Lr-ZxJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="138"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Wg-Fh-ngn" customClass="FSPageControl" customModule="FSPagerView">
+                                        <rect key="frame" x="0.0" y="108" width="375" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="PaQ-bk-vZb"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFO-RE-Bal" customClass="FSPagerView" customModule="FSPagerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="138"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="decelerationDistance">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9Wg-Fh-ngn" secondAttribute="bottom" id="0Ea-gn-lhv"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Wg-Fh-ngn" secondAttribute="trailing" id="8W4-MQ-cPG"/>
+                                    <constraint firstItem="IFO-RE-Bal" firstAttribute="top" secondItem="OqK-Lr-ZxJ" secondAttribute="top" id="8xL-FT-wBL"/>
+                                    <constraint firstItem="IFO-RE-Bal" firstAttribute="leading" secondItem="OqK-Lr-ZxJ" secondAttribute="leading" id="Joc-Er-E56"/>
+                                    <constraint firstAttribute="trailing" secondItem="IFO-RE-Bal" secondAttribute="trailing" id="N8q-hh-TqU"/>
+                                    <constraint firstAttribute="bottom" secondItem="IFO-RE-Bal" secondAttribute="bottom" id="yba-TY-HBq"/>
+                                    <constraint firstItem="9Wg-Fh-ngn" firstAttribute="leading" secondItem="OqK-Lr-ZxJ" secondAttribute="leading" id="zaV-hz-QfG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXd-na-aNe" userLabel="userValuesView">
+                                <rect key="frame" x="20" y="233" width="335" height="69.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14.2353 * 43943% * (34.7g / 17)" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeH-C6-D4Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="69.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="16"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BXd-na-aNe" secondAttribute="height" multiplier="125:26" id="7Hn-Rn-FJQ"/>
                                     <constraint firstAttribute="bottom" secondItem="XeH-C6-D4Y" secondAttribute="bottom" id="NoF-DR-nHc"/>
@@ -126,21 +130,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIP-uR-v9r">
-                                <rect key="frame" x="12" y="267" width="351" height="1"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exC-H9-Ufe" userLabel="calculationView">
-                                <rect key="frame" x="12" y="263.5" width="351" height="78"/>
+                                <rect key="frame" x="20" y="287.5" width="335" height="74.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4546.894" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VS0-6s-lGd">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="78"/>
-                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="35"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="74.5"/>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="VS0-6s-lGd" secondAttribute="bottom" id="0QI-CT-lq0"/>
                                     <constraint firstItem="VS0-6s-lGd" firstAttribute="top" secondItem="exC-H9-Ufe" secondAttribute="top" id="Exh-rC-VCr"/>
@@ -154,266 +154,134 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wvf-HO-mWP" userLabel="calculatorView">
-                                <rect key="frame" x="20" y="349.5" width="335" height="278"/>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wvf-HO-mWP" userLabel="calculatorView">
+                                <rect key="frame" x="0.0" y="362" width="375" height="305"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KCE-wb-Rdv">
-                                        <rect key="frame" x="5" y="0.0" width="325" height="61"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="KCE-wb-Rdv">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejb-Ls-7pj">
-                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="61"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="61"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="35"/>
-                                                <state key="normal" title="ac">
-                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="c">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                        <size key="value" width="3" height="-3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54O-QH-KGy">
-                                                <rect key="frame" x="81.5" y="0.0" width="81" height="61"/>
+                                                <rect key="frame" x="94" y="0.0" width="93.5" height="61"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="35"/>
                                                 <state key="normal" title="+/-">
-                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                        <size key="value" width="3" height="-3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00M-xG-RjW">
-                                                <rect key="frame" x="162.5" y="0.0" width="81.5" height="61"/>
+                                                <rect key="frame" x="188" y="0.0" width="93" height="61"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="35"/>
                                                 <state key="normal" title="%">
-                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                        <size key="value" width="3" height="-3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hsk-p9-pXL">
-                                                <rect key="frame" x="244" y="0.0" width="81" height="61"/>
+                                                <rect key="frame" x="281.5" y="0.0" width="93.5" height="61"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="35"/>
                                                 <state key="normal" title="/">
                                                     <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                        <size key="value" width="3" height="-3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="9KI-Gq-XTm">
-                                        <rect key="frame" x="5" y="61" width="325" height="61"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="9KI-Gq-XTm">
+                                        <rect key="frame" x="0.0" y="61" width="375" height="61"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uol-I0-PL2">
-                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="61"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="61"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="35"/>
                                                 <state key="normal" title="7">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                        <size key="value" width="3" height="-3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqY-bK-L46">
-                                                <rect key="frame" x="81.5" y="0.0" width="81" height="61"/>
+                                                <rect key="frame" x="94" y="0.0" width="93.5" height="61"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="35"/>
                                                 <state key="normal" title="8">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                        <size key="value" width="3" height="-3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlW-FL-f1g">
-                                                <rect key="frame" x="162.5" y="0.0" width="81.5" height="61"/>
+                                                <rect key="frame" x="188" y="0.0" width="93" height="61"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="35"/>
                                                 <state key="normal" title="9">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                        <size key="value" width="3" height="-3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69h-BK-crc">
-                                                <rect key="frame" x="244" y="0.0" width="81" height="61"/>
+                                                <rect key="frame" x="281.5" y="0.0" width="93.5" height="61"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="35"/>
                                                 <state key="normal" title="*">
                                                     <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                        <size key="value" width="3" height="-3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eFe-3B-hSU">
-                                        <rect key="frame" x="5" y="122" width="325" height="61"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="eFe-3B-hSU">
+                                        <rect key="frame" x="0.0" y="122" width="375" height="61"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uH-uM-SPh">
-                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="61"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="61"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="35"/>
                                                 <state key="normal" title="4">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                        <size key="value" width="3" height="-3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qtm-Ci-u7Q">
-                                                <rect key="frame" x="81.5" y="0.0" width="81" height="61"/>
+                                                <rect key="frame" x="94" y="0.0" width="93.5" height="61"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="35"/>
                                                 <state key="normal" title="5">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                        <size key="value" width="3" height="-3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjt-Vf-NuK">
-                                                <rect key="frame" x="162.5" y="0.0" width="81.5" height="61"/>
+                                                <rect key="frame" x="188" y="0.0" width="93" height="61"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="35"/>
                                                 <state key="normal" title="6">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                        <size key="value" width="3" height="-3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZi-Zh-UDc">
-                                                <rect key="frame" x="244" y="0.0" width="81" height="61"/>
+                                                <rect key="frame" x="281.5" y="0.0" width="93.5" height="61"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="35"/>
                                                 <state key="normal" title="-">
                                                     <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                        <size key="value" width="3" height="-3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JHS-rY-TUZ">
-                                        <rect key="frame" x="5" y="183" width="325" height="61"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="JHS-rY-TUZ">
+                                        <rect key="frame" x="0.0" y="183" width="375" height="61"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cD-BG-EEB">
-                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="61"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="61"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="35"/>
                                                 <state key="normal" title="1">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9C-li-SD2">
-                                                <rect key="frame" x="81.5" y="0.0" width="81" height="61"/>
+                                                <rect key="frame" x="94" y="0.0" width="93.5" height="61"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="35"/>
                                                 <state key="normal" title="2">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdA-OF-4VQ">
-                                                <rect key="frame" x="162.5" y="0.0" width="81.5" height="61"/>
+                                                <rect key="frame" x="188" y="0.0" width="93" height="61"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="35"/>
                                                 <state key="normal" title="3">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znO-cK-oqY">
-                                                <rect key="frame" x="244" y="0.0" width="81" height="61"/>
+                                                <rect key="frame" x="281.5" y="0.0" width="93.5" height="61"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="35"/>
                                                 <state key="normal" title="+">
                                                     <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -421,95 +289,62 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BZ5-FT-xSV">
-                                        <rect key="frame" x="5" y="244" width="325" height="54"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="BZ5-FT-xSV">
+                                        <rect key="frame" x="0.0" y="244" width="375" height="61"/>
                                         <subviews>
-                                            <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcB-gs-MzA">
-                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="54"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                <state key="normal">
+                                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcB-gs-MzA">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="61"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="Save">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAg-29-tpe">
-                                                <rect key="frame" x="81.5" y="0.0" width="81" height="54"/>
+                                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAg-29-tpe">
+                                                <rect key="frame" x="94" y="0.0" width="93.5" height="61"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                <state key="normal">
+                                                <state key="normal" title="0">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSb-aw-qG6">
-                                                <rect key="frame" x="162.5" y="0.0" width="81.5" height="54"/>
+                                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSb-aw-qG6">
+                                                <rect key="frame" x="188" y="0.0" width="93" height="61"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                <state key="normal">
+                                                <state key="normal" title=".">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9f-xA-DEw">
-                                                <rect key="frame" x="244" y="0.0" width="81" height="54"/>
+                                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9f-xA-DEw">
+                                                <rect key="frame" x="281.5" y="0.0" width="93.5" height="61"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                <state key="normal">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="=">
+                                                    <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQG-wt-y7h">
-                                        <rect key="frame" x="100" y="237" width="245" height="61"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nI-a8-RSY">
-                                                <rect key="frame" x="61.5" y="0.0" width="183.5" height="61"/>
-                                                <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="=">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="345-a0-175">
-                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="61"/>
-                                                <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title=".">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="8nI-a8-RSY" firstAttribute="top" secondItem="hQG-wt-y7h" secondAttribute="top" id="8gs-nw-z1s"/>
-                                            <constraint firstItem="8nI-a8-RSY" firstAttribute="leading" secondItem="345-a0-175" secondAttribute="trailing" constant="1" id="Ica-Bn-bTP"/>
-                                            <constraint firstAttribute="trailing" secondItem="8nI-a8-RSY" secondAttribute="trailing" id="IgA-be-jRt"/>
-                                            <constraint firstAttribute="bottom" secondItem="345-a0-175" secondAttribute="bottom" id="Ni2-f2-HDx"/>
-                                            <constraint firstItem="345-a0-175" firstAttribute="top" secondItem="hQG-wt-y7h" secondAttribute="top" id="bJi-iJ-Mi3"/>
-                                            <constraint firstItem="345-a0-175" firstAttribute="leading" secondItem="hQG-wt-y7h" secondAttribute="leading" id="n9U-ji-0cr"/>
-                                            <constraint firstAttribute="bottom" secondItem="8nI-a8-RSY" secondAttribute="bottom" id="pJQ-pg-P47"/>
-                                            <constraint firstItem="8nI-a8-RSY" firstAttribute="width" secondItem="hQG-wt-y7h" secondAttribute="width" multiplier="0.75" id="soU-HK-NHP"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="6"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="BZ5-FT-xSV" firstAttribute="top" secondItem="JHS-rY-TUZ" secondAttribute="bottom" id="2l3-9K-3dX"/>
-                                    <constraint firstItem="KCE-wb-Rdv" firstAttribute="leading" secondItem="wvf-HO-mWP" secondAttribute="leading" constant="5" id="D0d-AA-UAP"/>
+                                    <constraint firstItem="KCE-wb-Rdv" firstAttribute="leading" secondItem="wvf-HO-mWP" secondAttribute="leading" id="D0d-AA-UAP"/>
                                     <constraint firstItem="JHS-rY-TUZ" firstAttribute="top" secondItem="eFe-3B-hSU" secondAttribute="bottom" id="D4y-rn-zow"/>
                                     <constraint firstItem="eFe-3B-hSU" firstAttribute="top" secondItem="9KI-Gq-XTm" secondAttribute="bottom" id="HOo-8S-1xF"/>
-                                    <constraint firstAttribute="trailing" secondItem="eFe-3B-hSU" secondAttribute="trailing" constant="5" id="LDP-RR-aet"/>
-                                    <constraint firstItem="hQG-wt-y7h" firstAttribute="top" secondItem="eFe-3B-hSU" secondAttribute="bottom" constant="54" id="Mao-qb-zwj"/>
-                                    <constraint firstItem="hQG-wt-y7h" firstAttribute="leading" secondItem="wvf-HO-mWP" secondAttribute="leading" constant="100" id="NLf-cl-LXG"/>
-                                    <constraint firstAttribute="trailing" secondItem="9KI-Gq-XTm" secondAttribute="trailing" constant="5" id="Pu9-Hc-Qdp"/>
-                                    <constraint firstItem="BZ5-FT-xSV" firstAttribute="leading" secondItem="wvf-HO-mWP" secondAttribute="leading" constant="5" id="YIP-tu-lp5"/>
-                                    <constraint firstItem="JHS-rY-TUZ" firstAttribute="leading" secondItem="wvf-HO-mWP" secondAttribute="leading" constant="5" id="YNe-Wv-jjV"/>
-                                    <constraint firstAttribute="trailing" secondItem="BZ5-FT-xSV" secondAttribute="trailing" constant="5" id="hGX-Ia-zOy"/>
-                                    <constraint firstAttribute="bottom" secondItem="BZ5-FT-xSV" secondAttribute="bottom" constant="-20" id="hdz-kk-lSe"/>
-                                    <constraint firstAttribute="bottom" secondItem="hQG-wt-y7h" secondAttribute="bottom" constant="-20" id="ho4-R8-rqO"/>
-                                    <constraint firstAttribute="trailing" secondItem="JHS-rY-TUZ" secondAttribute="trailing" constant="5" id="jBR-wV-aT8"/>
-                                    <constraint firstItem="eFe-3B-hSU" firstAttribute="leading" secondItem="wvf-HO-mWP" secondAttribute="leading" constant="5" id="jTq-Rt-r86"/>
-                                    <constraint firstItem="9KI-Gq-XTm" firstAttribute="leading" secondItem="wvf-HO-mWP" secondAttribute="leading" constant="5" id="kXW-7n-LkN"/>
+                                    <constraint firstItem="eFe-3B-hSU" firstAttribute="height" secondItem="wvf-HO-mWP" secondAttribute="height" multiplier="0.2" id="Kab-DQ-tvG"/>
+                                    <constraint firstAttribute="trailing" secondItem="eFe-3B-hSU" secondAttribute="trailing" id="LDP-RR-aet"/>
+                                    <constraint firstItem="JHS-rY-TUZ" firstAttribute="height" secondItem="wvf-HO-mWP" secondAttribute="height" multiplier="0.2" id="Lqq-2g-c0D"/>
+                                    <constraint firstAttribute="trailing" secondItem="9KI-Gq-XTm" secondAttribute="trailing" id="Pu9-Hc-Qdp"/>
+                                    <constraint firstItem="BZ5-FT-xSV" firstAttribute="top" secondItem="JHS-rY-TUZ" secondAttribute="bottom" id="SAF-DT-tlo"/>
+                                    <constraint firstItem="KCE-wb-Rdv" firstAttribute="height" secondItem="wvf-HO-mWP" secondAttribute="height" multiplier="0.2" id="WIc-1t-kma"/>
+                                    <constraint firstItem="BZ5-FT-xSV" firstAttribute="leading" secondItem="wvf-HO-mWP" secondAttribute="leading" id="YIP-tu-lp5"/>
+                                    <constraint firstItem="JHS-rY-TUZ" firstAttribute="leading" secondItem="wvf-HO-mWP" secondAttribute="leading" id="YNe-Wv-jjV"/>
+                                    <constraint firstAttribute="trailing" secondItem="BZ5-FT-xSV" secondAttribute="trailing" id="hGX-Ia-zOy"/>
+                                    <constraint firstAttribute="bottom" secondItem="BZ5-FT-xSV" secondAttribute="bottom" id="hdz-kk-lSe"/>
+                                    <constraint firstItem="BZ5-FT-xSV" firstAttribute="height" secondItem="wvf-HO-mWP" secondAttribute="height" multiplier="0.2" id="ibp-ta-vhl"/>
+                                    <constraint firstAttribute="trailing" secondItem="JHS-rY-TUZ" secondAttribute="trailing" id="jBR-wV-aT8"/>
+                                    <constraint firstItem="eFe-3B-hSU" firstAttribute="leading" secondItem="wvf-HO-mWP" secondAttribute="leading" id="jTq-Rt-r86"/>
+                                    <constraint firstItem="9KI-Gq-XTm" firstAttribute="leading" secondItem="wvf-HO-mWP" secondAttribute="leading" id="kXW-7n-LkN"/>
+                                    <constraint firstItem="9KI-Gq-XTm" firstAttribute="height" secondItem="wvf-HO-mWP" secondAttribute="height" multiplier="0.2" id="sbo-Fz-Ags"/>
                                     <constraint firstItem="9KI-Gq-XTm" firstAttribute="top" secondItem="KCE-wb-Rdv" secondAttribute="bottom" id="t6G-CO-VYZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="KCE-wb-Rdv" secondAttribute="trailing" constant="5" id="ts1-3J-2fh"/>
-                                    <constraint firstAttribute="trailing" secondItem="hQG-wt-y7h" secondAttribute="trailing" constant="-10" id="tt7-5d-dk7"/>
+                                    <constraint firstAttribute="trailing" secondItem="KCE-wb-Rdv" secondAttribute="trailing" id="ts1-3J-2fh"/>
                                     <constraint firstItem="KCE-wb-Rdv" firstAttribute="top" secondItem="wvf-HO-mWP" secondAttribute="top" id="wyk-nJ-nHY"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -522,30 +357,26 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OqK-Lr-ZxJ" firstAttribute="centerX" secondItem="wgj-3v-sOg" secondAttribute="centerX" id="6g9-B3-1cX"/>
-                            <constraint firstItem="wvf-HO-mWP" firstAttribute="leading" secondItem="TPV-ew-05h" secondAttribute="leading" constant="20" id="E7v-1x-2ll"/>
-                            <constraint firstItem="BXd-na-aNe" firstAttribute="leading" secondItem="TPV-ew-05h" secondAttribute="leading" constant="12" id="ERq-pu-ZPS"/>
-                            <constraint firstItem="exC-H9-Ufe" firstAttribute="trailing" secondItem="TPV-ew-05h" secondAttribute="trailing" constant="-12" id="Fkh-UV-XHg"/>
-                            <constraint firstItem="wvf-HO-mWP" firstAttribute="top" secondItem="exC-H9-Ufe" secondAttribute="bottom" constant="8" id="MKP-2F-P6I"/>
-                            <constraint firstItem="OqK-Lr-ZxJ" firstAttribute="top" secondItem="TPV-ew-05h" secondAttribute="top" constant="12" id="MQn-6L-PrP"/>
-                            <constraint firstItem="UIP-uR-v9r" firstAttribute="top" secondItem="BXd-na-aNe" secondAttribute="bottom" constant="8.5" id="Pm8-iR-gGC"/>
-                            <constraint firstItem="exC-H9-Ufe" firstAttribute="leading" secondItem="TPV-ew-05h" secondAttribute="leading" constant="12" id="Pph-2C-OG0"/>
-                            <constraint firstItem="TPV-ew-05h" firstAttribute="trailing" secondItem="BXd-na-aNe" secondAttribute="trailing" constant="12" id="U18-EV-Fce"/>
-                            <constraint firstItem="Mh2-la-bsI" firstAttribute="top" secondItem="wgj-3v-sOg" secondAttribute="top" id="UVj-K1-mr4"/>
+                            <constraint firstItem="wvf-HO-mWP" firstAttribute="leading" secondItem="TPV-ew-05h" secondAttribute="leading" id="E7v-1x-2ll"/>
+                            <constraint firstItem="BXd-na-aNe" firstAttribute="leading" secondItem="TPV-ew-05h" secondAttribute="leading" constant="20" id="ERq-pu-ZPS"/>
+                            <constraint firstItem="exC-H9-Ufe" firstAttribute="trailing" secondItem="TPV-ew-05h" secondAttribute="trailing" constant="-20" id="Fkh-UV-XHg"/>
+                            <constraint firstItem="BXd-na-aNe" firstAttribute="top" secondItem="OqK-Lr-ZxJ" secondAttribute="bottom" constant="75" id="JnV-A5-YUE"/>
+                            <constraint firstItem="wvf-HO-mWP" firstAttribute="top" secondItem="exC-H9-Ufe" secondAttribute="bottom" id="MKP-2F-P6I"/>
+                            <constraint firstItem="exC-H9-Ufe" firstAttribute="leading" secondItem="TPV-ew-05h" secondAttribute="leading" constant="20" id="Pph-2C-OG0"/>
+                            <constraint firstItem="TPV-ew-05h" firstAttribute="trailing" secondItem="BXd-na-aNe" secondAttribute="trailing" constant="20" id="U18-EV-Fce"/>
+                            <constraint firstItem="Mh2-la-bsI" firstAttribute="top" secondItem="TPV-ew-05h" secondAttribute="top" constant="-20" id="UVj-K1-mr4"/>
                             <constraint firstItem="TPV-ew-05h" firstAttribute="bottom" secondItem="Gnn-LR-K5H" secondAttribute="bottom" id="VhQ-Uy-Vwp"/>
+                            <constraint firstItem="OqK-Lr-ZxJ" firstAttribute="top" secondItem="TPV-ew-05h" secondAttribute="top" id="YF7-pg-bmG"/>
                             <constraint firstItem="TPV-ew-05h" firstAttribute="trailing" secondItem="Gnn-LR-K5H" secondAttribute="trailing" id="axn-k6-tGp"/>
                             <constraint firstItem="Gnn-LR-K5H" firstAttribute="top" secondItem="wgj-3v-sOg" secondAttribute="topMargin" id="brc-v6-Sdw"/>
-                            <constraint firstItem="TPV-ew-05h" firstAttribute="trailing" secondItem="OqK-Lr-ZxJ" secondAttribute="trailing" constant="24" id="dYN-Ne-HfI"/>
+                            <constraint firstItem="TPV-ew-05h" firstAttribute="trailing" secondItem="OqK-Lr-ZxJ" secondAttribute="trailing" id="dYN-Ne-HfI"/>
                             <constraint firstItem="Mh2-la-bsI" firstAttribute="leading" secondItem="TPV-ew-05h" secondAttribute="leading" id="fgN-Yy-rq5"/>
                             <constraint firstItem="Gnn-LR-K5H" firstAttribute="leading" secondItem="TPV-ew-05h" secondAttribute="leading" id="g4q-ff-Ncx"/>
-                            <constraint firstItem="UIP-uR-v9r" firstAttribute="leading" secondItem="BXd-na-aNe" secondAttribute="leading" id="gJJ-ii-Xb4"/>
-                            <constraint firstItem="exC-H9-Ufe" firstAttribute="top" secondItem="UIP-uR-v9r" secondAttribute="bottom" constant="-4.5" id="iLe-Xe-p82"/>
-                            <constraint firstItem="wvf-HO-mWP" firstAttribute="trailing" secondItem="TPV-ew-05h" secondAttribute="trailing" constant="-20" id="jDQ-RF-0ZT"/>
-                            <constraint firstItem="exC-H9-Ufe" firstAttribute="top" secondItem="BXd-na-aNe" secondAttribute="bottom" constant="5" id="keM-iO-ete"/>
-                            <constraint firstItem="BXd-na-aNe" firstAttribute="top" secondItem="Mh2-la-bsI" secondAttribute="bottom" constant="146" id="slH-RE-pbF"/>
+                            <constraint firstItem="wvf-HO-mWP" firstAttribute="trailing" secondItem="TPV-ew-05h" secondAttribute="trailing" id="jDQ-RF-0ZT"/>
+                            <constraint firstItem="exC-H9-Ufe" firstAttribute="top" secondItem="BXd-na-aNe" secondAttribute="bottom" constant="-15" id="keM-iO-ete"/>
                             <constraint firstItem="Mh2-la-bsI" firstAttribute="trailing" secondItem="TPV-ew-05h" secondAttribute="trailing" id="slP-aX-vHf"/>
-                            <constraint firstItem="OqK-Lr-ZxJ" firstAttribute="leading" secondItem="TPV-ew-05h" secondAttribute="leading" constant="24" id="y1f-CG-tFW"/>
-                            <constraint firstItem="UIP-uR-v9r" firstAttribute="trailing" secondItem="BXd-na-aNe" secondAttribute="trailing" id="yAV-Du-yxU"/>
-                            <constraint firstItem="BXd-na-aNe" firstAttribute="top" secondItem="OqK-Lr-ZxJ" secondAttribute="bottom" constant="60" id="zaV-tg-ygs"/>
+                            <constraint firstItem="TPV-ew-05h" firstAttribute="bottom" secondItem="wvf-HO-mWP" secondAttribute="bottom" id="ukL-kh-KVk"/>
+                            <constraint firstItem="OqK-Lr-ZxJ" firstAttribute="leading" secondItem="TPV-ew-05h" secondAttribute="leading" id="y1f-CG-tFW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TPV-ew-05h"/>
                     </view>
@@ -553,7 +384,11 @@
                         <outlet property="calculatedStaticVariablesView" destination="BXd-na-aNe" id="zV6-Pz-qes"/>
                         <outlet property="calculationView" destination="exC-H9-Ufe" id="oZc-dg-djr"/>
                         <outlet property="calculatorView" destination="wvf-HO-mWP" id="M0x-od-lix"/>
+                        <outlet property="carouselPageControl" destination="9Wg-Fh-ngn" id="ZAD-mr-n3i"/>
+                        <outlet property="carouselView" destination="IFO-RE-Bal" id="ydG-0d-oTi"/>
                         <outlet property="overlapHeaderView" destination="OqK-Lr-ZxJ" id="DBO-Hk-FvJ"/>
+                        <outletCollection property="calculatorButtons" destination="oAg-29-tpe" collectionClass="NSMutableArray" id="Gqq-ZL-50d"/>
+                        <outletCollection property="calculatorButtons" destination="xSb-aw-qG6" collectionClass="NSMutableArray" id="ytF-gi-nxs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XlM-Mi-sc2" userLabel="First Responder" sceneMemberID="firstResponder"/>

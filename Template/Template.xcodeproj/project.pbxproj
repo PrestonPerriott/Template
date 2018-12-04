@@ -17,6 +17,9 @@
 		830CD674218022BD003C91A9 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830CD672218022BD003C91A9 /* HomeCollectionViewCell.xib */; };
 		830CD6772180BA63003C91A9 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830CD6762180BA63003C91A9 /* MainTabViewController.swift */; };
 		830CD6792180C79A003C91A9 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830CD6782180C79A003C91A9 /* UIViewController+Navigation.swift */; };
+		8312A17A21B44AAA006711AB /* CalculatorHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312A17821B44AAA006711AB /* CalculatorHeaderCell.swift */; };
+		8312A17B21B44AAA006711AB /* CalculatorHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8312A17921B44AAA006711AB /* CalculatorHeaderCell.xib */; };
+		8312A17D21B4521A006711AB /* UserCalcInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312A17C21B4521A006711AB /* UserCalcInput.swift */; };
 		831466172183A90A00F7B85E /* HomeCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831466162183A90A00F7B85E /* HomeCollectionViewLayout.swift */; };
 		831695E7217141010071C3A5 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831695E6217141010071C3A5 /* AuthenticationService.swift */; };
 		831695E92174D7D20071C3A5 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831695E82174D7D20071C3A5 /* UIButton+Style.swift */; };
@@ -71,6 +74,9 @@
 		830CD672218022BD003C91A9 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		830CD6762180BA63003C91A9 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		830CD6782180C79A003C91A9 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
+		8312A17821B44AAA006711AB /* CalculatorHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorHeaderCell.swift; sourceTree = "<group>"; };
+		8312A17921B44AAA006711AB /* CalculatorHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorHeaderCell.xib; sourceTree = "<group>"; };
+		8312A17C21B4521A006711AB /* UserCalcInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCalcInput.swift; sourceTree = "<group>"; };
 		831466162183A90A00F7B85E /* HomeCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewLayout.swift; sourceTree = "<group>"; };
 		831695E6217141010071C3A5 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		831695E82174D7D20071C3A5 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
@@ -174,6 +180,15 @@
 			path = MainTabBar;
 			sourceTree = "<group>";
 		};
+		8312A17721B44A34006711AB /* CalculatorHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				8312A17821B44AAA006711AB /* CalculatorHeaderCell.swift */,
+				8312A17921B44AAA006711AB /* CalculatorHeaderCell.xib */,
+			);
+			path = CalculatorHeaderCell;
+			sourceTree = "<group>";
+		};
 		8314661421816E5300F7B85E /* Supplementary */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +209,7 @@
 		83146618218C126600F7B85E /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				8312A17721B44A34006711AB /* CalculatorHeaderCell */,
 				835391E32199D17600648562 /* Calculator.storyboard */,
 				835391E52199D18F00648562 /* CalculatorViewController.swift */,
 				835391E72199D1BF00648562 /* CalculatorController.swift */,
@@ -224,6 +240,7 @@
 			children = (
 				834D5DB3215AD414001614CD /* User.swift */,
 				830CD66521800C9C003C91A9 /* Recipe.swift */,
+				8312A17C21B4521A006711AB /* UserCalcInput.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -415,6 +432,7 @@
 				836ECB0521581CF100B6AA20 /* LaunchScreen.storyboard in Resources */,
 				83218CCD21A1DC5B00575BE3 /* RecipeDetail.storyboard in Resources */,
 				836ECB0221581CF100B6AA20 /* Assets.xcassets in Resources */,
+				8312A17B21B44AAA006711AB /* CalculatorHeaderCell.xib in Resources */,
 				836ECB0021581CF100B6AA20 /* Login.storyboard in Resources */,
 				835391E42199D17600648562 /* Calculator.storyboard in Resources */,
 				830CD66B218019DE003C91A9 /* Home.storyboard in Resources */,
@@ -458,6 +476,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Template/Pods-Template-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MediumMenu/MediumMenu.framework",
@@ -470,6 +489,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MediumMenu.framework",
@@ -520,6 +540,7 @@
 				835391E82199D1BF00648562 /* CalculatorController.swift in Sources */,
 				836ECAFB21581CF100B6AA20 /* AppDelegate.swift in Sources */,
 				836ECB202158ACB100B6AA20 /* FloatTextField.swift in Sources */,
+				8312A17A21B44AAA006711AB /* CalculatorHeaderCell.swift in Sources */,
 				831466172183A90A00F7B85E /* HomeCollectionViewLayout.swift in Sources */,
 				830CD668218016AF003C91A9 /* RecipeService.swift in Sources */,
 				830CD66F21801A1B003C91A9 /* HomeController.swift in Sources */,
@@ -534,6 +555,7 @@
 				8319CC4321A33B9C005CE3E3 /* RecipeDetailController.swift in Sources */,
 				835C363E216EC2FE00A94A52 /* Ecodable+Dictionary.swift in Sources */,
 				836ECB2721597EDC00B6AA20 /* LoginController.swift in Sources */,
+				8312A17D21B4521A006711AB /* UserCalcInput.swift in Sources */,
 				835391EE219A26C400648562 /* CircularSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

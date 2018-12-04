@@ -36,7 +36,7 @@ extension MainTabViewController {
         
         let calc = formNavController("Calculator", "CalculatorViewController", CalculatorViewController.self)
         calc.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 1)
-        calc.navigationBar.topItem?.title = "Recipes"
+        calc.navigationBar.topItem?.title = "Calculator"
         calc.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .done, target: self, action: #selector(showMenu))
         
         setUpMenu()

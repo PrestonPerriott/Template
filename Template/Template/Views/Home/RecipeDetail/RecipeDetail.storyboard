@@ -85,7 +85,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="hZS-2Q-epa" firstAttribute="leading" secondItem="jcM-uM-EFL" secondAttribute="leading" constant="10" id="1i3-uE-bp3"/>
                                                     <constraint firstAttribute="trailing" secondItem="hZS-2Q-epa" secondAttribute="trailing" constant="10" id="CZ5-Ej-Jb3"/>
@@ -167,7 +167,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="FSb-Xi-DcR" secondAttribute="bottom" id="EJ9-AZ-9j9"/>
                                                     <constraint firstItem="FSb-Xi-DcR" firstAttribute="leading" secondItem="QS8-nT-SUv" secondAttribute="leading" constant="10" id="FkZ-Sl-qoa"/>

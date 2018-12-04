@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DTC-oT-v5s">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <collectionViewLayout key="collectionViewLayout" id="Yh6-sc-fhk" customClass="HomeCollectionViewLayout" customModule="Template" customModuleProvider="target"/>
                                 <cells/>
@@ -27,7 +27,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DTC-oT-v5s" firstAttribute="top" secondItem="4LP-Nl-yv6" secondAttribute="top" id="Gu8-yd-not"/>
+                            <constraint firstItem="DTC-oT-v5s" firstAttribute="top" secondItem="dlD-ki-qM2" secondAttribute="top" id="Gu8-yd-not"/>
                             <constraint firstItem="DTC-oT-v5s" firstAttribute="leading" secondItem="dlD-ki-qM2" secondAttribute="leading" id="Pml-XU-3Jh"/>
                             <constraint firstItem="DTC-oT-v5s" firstAttribute="trailing" secondItem="dlD-ki-qM2" secondAttribute="trailing" id="hZL-aD-9ke"/>
                             <constraint firstItem="DTC-oT-v5s" firstAttribute="bottom" secondItem="dlD-ki-qM2" secondAttribute="bottom" id="kRX-gR-WeC"/>

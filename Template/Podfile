@@ -15,6 +15,7 @@ def sharedPods
     pod 'Alamofire', '~> 4.7'
     pod 'SVProgressHUD'
     pod 'MediumMenu'
+    pod 'FSPagerView'
     pod 'AlamofireNetworkActivityIndicator', '~> 2.2'
 end
 

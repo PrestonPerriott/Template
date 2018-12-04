@@ -41,7 +41,7 @@ class RecipeDetailViewController: UIViewController {
         self.detailImageView.image = UIImage(data: try! Data(contentsOf: URL(string: recipe.image)!))
         self.detailTitle.text = recipe.title
         self.detailCookTimeLabel.text = "\(recipe.totalTime) min"
-        self.view.applyGradient(with: [UIColor.init(red: 21/255, green: 21/255, blue: 23/255, alpha: 0.75).cgColor, UIColor.init(red: 41/255, green: 35/255, blue: 46/255, alpha: 0.75).cgColor, UIColor.init(red: 57/255, green: 48/255, blue: 66/255, alpha: 0.75).cgColor])
+        self.view.applyGradient(with: [UIColor.init(red: 21/255, green: 21/255, blue: 23/255, alpha: 1).cgColor, UIColor.init(red: 41/255, green: 35/255, blue: 46/255, alpha: 1).cgColor, UIColor.init(red: 57/255, green: 48/255, blue: 66/255, alpha: 1).cgColor])
         
         let viewArray: [UIView] = [cookTimeView, descriptionView, directionsView, detailImageView]
         for view in viewArray {
@@ -49,7 +49,8 @@ class RecipeDetailViewController: UIViewController {
             view.layer.shadowOpacity = 1
             view.layer.shadowOffset = CGSize(width: 4, height: 4)
             view.layer.shadowRadius = 6
-            view.layer.cornerRadius = 6
+            view.layer.cornerRadius = 1
+            view.alpha = 0.75
         }
     }
     @IBAction func pressedBackButton(_ sender: UIButton) {

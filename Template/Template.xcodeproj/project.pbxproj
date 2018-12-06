@@ -37,6 +37,7 @@
 		835C362C216B21A900A94A52 /* NetworkCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835C362B216B21A900A94A52 /* NetworkCompletion.swift */; };
 		835C362E216B22E800A94A52 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835C362D216B22E800A94A52 /* NetworkService.swift */; };
 		835C363E216EC2FE00A94A52 /* Ecodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835C363D216EC2FE00A94A52 /* Ecodable+Dictionary.swift */; };
+		836552B521B6EC5B00CEDB59 /* CalculatorHeaderCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836552B421B6EC5B00CEDB59 /* CalculatorHeaderCellController.swift */; };
 		836ECAFB21581CF100B6AA20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836ECAFA21581CF100B6AA20 /* AppDelegate.swift */; };
 		836ECB0021581CF100B6AA20 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836ECAFE21581CF100B6AA20 /* Login.storyboard */; };
 		836ECB0221581CF100B6AA20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836ECB0121581CF100B6AA20 /* Assets.xcassets */; };
@@ -94,6 +95,7 @@
 		835C362B216B21A900A94A52 /* NetworkCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCompletion.swift; sourceTree = "<group>"; };
 		835C362D216B22E800A94A52 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		835C363D216EC2FE00A94A52 /* Ecodable+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ecodable+Dictionary.swift"; sourceTree = "<group>"; };
+		836552B421B6EC5B00CEDB59 /* CalculatorHeaderCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorHeaderCellController.swift; sourceTree = "<group>"; };
 		836ECAF721581CF000B6AA20 /* Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836ECAFA21581CF100B6AA20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		836ECAFF21581CF100B6AA20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -153,7 +155,6 @@
 		830CD669218019C7003C91A9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				8327707C21A09EAF00EB622F /* RecipeDetail */,
 				831466152183A89300F7B85E /* Layout */,
 				830CD67021802277003C91A9 /* HomeCollectionViewCells */,
 				830CD66A218019DE003C91A9 /* Home.storyboard */,
@@ -185,6 +186,7 @@
 			children = (
 				8312A17821B44AAA006711AB /* CalculatorHeaderCell.swift */,
 				8312A17921B44AAA006711AB /* CalculatorHeaderCell.xib */,
+				836552B421B6EC5B00CEDB59 /* CalculatorHeaderCellController.swift */,
 			);
 			path = CalculatorHeaderCell;
 			sourceTree = "<group>";
@@ -305,6 +307,7 @@
 				836ECB0321581CF100B6AA20 /* LaunchScreen.storyboard */,
 				83146618218C126600F7B85E /* Calculator */,
 				8314661421816E5300F7B85E /* Supplementary */,
+				8327707C21A09EAF00EB622F /* RecipeDetail */,
 				830CD6752180BA34003C91A9 /* MainTabBar */,
 				830CD669218019C7003C91A9 /* Home */,
 				836ECB212158AD7F00B6AA20 /* Login */,
@@ -540,6 +543,7 @@
 				835391E82199D1BF00648562 /* CalculatorController.swift in Sources */,
 				836ECAFB21581CF100B6AA20 /* AppDelegate.swift in Sources */,
 				836ECB202158ACB100B6AA20 /* FloatTextField.swift in Sources */,
+				836552B521B6EC5B00CEDB59 /* CalculatorHeaderCellController.swift in Sources */,
 				8312A17A21B44AAA006711AB /* CalculatorHeaderCell.swift in Sources */,
 				831466172183A90A00F7B85E /* HomeCollectionViewLayout.swift in Sources */,
 				830CD668218016AF003C91A9 /* RecipeService.swift in Sources */,

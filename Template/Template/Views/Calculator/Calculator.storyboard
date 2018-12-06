@@ -108,21 +108,60 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXd-na-aNe" userLabel="userValuesView">
                                 <rect key="frame" x="20" y="233" width="335" height="69.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14.2353 * 43943% * (34.7g / 17)" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeH-C6-D4Y">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="69.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Herb" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xjp-jX-aCa">
+                                        <rect key="frame" x="8" y="26" width="53" height="17"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="16"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Weight" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dtG-P9-ErT">
+                                        <rect key="frame" x="274" y="26" width="53" height="17"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lee-ji-EOm">
+                                        <rect key="frame" x="81" y="24.5" width="40" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sey-qg-myE">
+                                        <rect key="frame" x="214" y="24.5" width="40" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Oil" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QhY-QJ-fOy">
+                                        <rect key="frame" x="141" y="26" width="53" height="17"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="53" id="i9e-Pd-9pq"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="xjp-jX-aCa" firstAttribute="width" secondItem="QhY-QJ-fOy" secondAttribute="width" id="1p9-kY-2VW"/>
+                                    <constraint firstItem="Sey-qg-myE" firstAttribute="centerY" secondItem="BXd-na-aNe" secondAttribute="centerY" id="49l-mQ-qLY"/>
+                                    <constraint firstItem="QhY-QJ-fOy" firstAttribute="width" secondItem="dtG-P9-ErT" secondAttribute="width" id="6ea-Fd-OAY"/>
                                     <constraint firstAttribute="width" secondItem="BXd-na-aNe" secondAttribute="height" multiplier="125:26" id="7Hn-Rn-FJQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="XeH-C6-D4Y" secondAttribute="bottom" id="NoF-DR-nHc"/>
-                                    <constraint firstAttribute="trailing" secondItem="XeH-C6-D4Y" secondAttribute="trailing" id="Qg9-AT-HGn"/>
-                                    <constraint firstItem="XeH-C6-D4Y" firstAttribute="leading" secondItem="BXd-na-aNe" secondAttribute="leading" id="f3c-Wo-v1p"/>
-                                    <constraint firstItem="XeH-C6-D4Y" firstAttribute="top" secondItem="BXd-na-aNe" secondAttribute="top" id="rFp-2X-qnE"/>
+                                    <constraint firstAttribute="trailing" secondItem="dtG-P9-ErT" secondAttribute="trailing" constant="8" id="8Zl-te-jfI"/>
+                                    <constraint firstItem="Sey-qg-myE" firstAttribute="leading" secondItem="QhY-QJ-fOy" secondAttribute="trailing" constant="20" id="BHu-aU-5oX"/>
+                                    <constraint firstItem="dtG-P9-ErT" firstAttribute="centerY" secondItem="BXd-na-aNe" secondAttribute="centerY" id="GnE-J9-p48"/>
+                                    <constraint firstItem="xjp-jX-aCa" firstAttribute="centerY" secondItem="BXd-na-aNe" secondAttribute="centerY" id="JV7-AO-bwb"/>
+                                    <constraint firstItem="lee-ji-EOm" firstAttribute="centerY" secondItem="BXd-na-aNe" secondAttribute="centerY" id="Jol-f6-rOz"/>
+                                    <constraint firstItem="QhY-QJ-fOy" firstAttribute="centerX" secondItem="BXd-na-aNe" secondAttribute="centerX" id="bGW-Tl-hDj"/>
+                                    <constraint firstItem="dtG-P9-ErT" firstAttribute="leading" secondItem="Sey-qg-myE" secondAttribute="trailing" constant="20" id="hYN-aN-Igk"/>
+                                    <constraint firstItem="QhY-QJ-fOy" firstAttribute="centerY" secondItem="BXd-na-aNe" secondAttribute="centerY" id="o3L-Cu-Uus"/>
+                                    <constraint firstItem="lee-ji-EOm" firstAttribute="leading" secondItem="xjp-jX-aCa" secondAttribute="trailing" constant="20" id="qm6-d8-CbK"/>
+                                    <constraint firstItem="xjp-jX-aCa" firstAttribute="leading" secondItem="BXd-na-aNe" secondAttribute="leading" constant="8" id="wEZ-Qq-OvZ"/>
+                                    <constraint firstItem="QhY-QJ-fOy" firstAttribute="leading" secondItem="lee-ji-EOm" secondAttribute="trailing" constant="20" id="ytu-SM-HqX"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -199,6 +238,9 @@
                                                 <state key="normal" title="7">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedCalcViewButtonWithSender:" destination="uAD-dm-cOU" eventType="touchUpInside" id="kTl-Af-QJm"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqY-bK-L46">
                                                 <rect key="frame" x="94" y="0.0" width="93.5" height="61"/>
@@ -206,6 +248,9 @@
                                                 <state key="normal" title="8">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedCalcViewButtonWithSender:" destination="uAD-dm-cOU" eventType="touchUpInside" id="IHF-Rk-MTg"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlW-FL-f1g">
                                                 <rect key="frame" x="188" y="0.0" width="93" height="61"/>
@@ -213,6 +258,9 @@
                                                 <state key="normal" title="9">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedCalcViewButtonWithSender:" destination="uAD-dm-cOU" eventType="touchUpInside" id="0Xj-qO-4HH"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69h-BK-crc">
                                                 <rect key="frame" x="281.5" y="0.0" width="93.5" height="61"/>
@@ -232,6 +280,9 @@
                                                 <state key="normal" title="4">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedCalcViewButtonWithSender:" destination="uAD-dm-cOU" eventType="touchUpInside" id="wKe-7i-Cj8"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qtm-Ci-u7Q">
                                                 <rect key="frame" x="94" y="0.0" width="93.5" height="61"/>
@@ -239,6 +290,9 @@
                                                 <state key="normal" title="5">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedCalcViewButtonWithSender:" destination="uAD-dm-cOU" eventType="touchUpInside" id="q9J-zI-Eb5"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjt-Vf-NuK">
                                                 <rect key="frame" x="188" y="0.0" width="93" height="61"/>
@@ -246,6 +300,9 @@
                                                 <state key="normal" title="6">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedCalcViewButtonWithSender:" destination="uAD-dm-cOU" eventType="touchUpInside" id="l3u-TH-hzy"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZi-Zh-UDc">
                                                 <rect key="frame" x="281.5" y="0.0" width="93.5" height="61"/>
@@ -265,6 +322,9 @@
                                                 <state key="normal" title="1">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedCalcViewButtonWithSender:" destination="uAD-dm-cOU" eventType="touchUpInside" id="qKb-tb-jGL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9C-li-SD2">
                                                 <rect key="frame" x="94" y="0.0" width="93.5" height="61"/>
@@ -272,6 +332,9 @@
                                                 <state key="normal" title="2">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedCalcViewButtonWithSender:" destination="uAD-dm-cOU" eventType="touchUpInside" id="akI-ef-d1c"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdA-OF-4VQ">
                                                 <rect key="frame" x="188" y="0.0" width="93" height="61"/>
@@ -279,6 +342,9 @@
                                                 <state key="normal" title="3">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedCalcViewButtonWithSender:" destination="uAD-dm-cOU" eventType="touchUpInside" id="Ld0-nw-EXU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znO-cK-oqY">
                                                 <rect key="frame" x="281.5" y="0.0" width="93.5" height="61"/>
@@ -305,6 +371,9 @@
                                                 <state key="normal" title="0">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedCalcViewButtonWithSender:" destination="uAD-dm-cOU" eventType="touchUpInside" id="DSP-HR-mXQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSb-aw-qG6">
                                                 <rect key="frame" x="188" y="0.0" width="93" height="61"/>
@@ -312,6 +381,9 @@
                                                 <state key="normal" title=".">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedCalcViewButtonWithSender:" destination="uAD-dm-cOU" eventType="touchUpInside" id="aMT-a5-tBZ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9f-xA-DEw">
                                                 <rect key="frame" x="281.5" y="0.0" width="93.5" height="61"/>
@@ -388,7 +460,28 @@
                         <outlet property="carouselView" destination="IFO-RE-Bal" id="ydG-0d-oTi"/>
                         <outlet property="overlapHeaderView" destination="OqK-Lr-ZxJ" id="DBO-Hk-FvJ"/>
                         <outletCollection property="calculatorButtons" destination="oAg-29-tpe" collectionClass="NSMutableArray" id="Gqq-ZL-50d"/>
-                        <outletCollection property="calculatorButtons" destination="xSb-aw-qG6" collectionClass="NSMutableArray" id="ytF-gi-nxs"/>
+                        <outletCollection property="calculatorButtons" destination="2cD-BG-EEB" collectionClass="NSMutableArray" id="kau-EJ-BEd"/>
+                        <outletCollection property="calculatorButtons" destination="E9C-li-SD2" collectionClass="NSMutableArray" id="O4H-2b-nPT"/>
+                        <outletCollection property="calculatorButtons" destination="ZdA-OF-4VQ" collectionClass="NSMutableArray" id="0yY-xF-lCT"/>
+                        <outletCollection property="calculatorButtons" destination="3uH-uM-SPh" collectionClass="NSMutableArray" id="F8p-ZJ-q3b"/>
+                        <outletCollection property="calculatorButtons" destination="Qtm-Ci-u7Q" collectionClass="NSMutableArray" id="dre-yP-Q1D"/>
+                        <outletCollection property="calculatorButtons" destination="xjt-Vf-NuK" collectionClass="NSMutableArray" id="xSh-9g-djX"/>
+                        <outletCollection property="calculatorButtons" destination="Uol-I0-PL2" collectionClass="NSMutableArray" id="eEn-gt-Vru"/>
+                        <outletCollection property="calculatorButtons" destination="tqY-bK-L46" collectionClass="NSMutableArray" id="Bod-a9-kmH"/>
+                        <outletCollection property="calculatorButtons" destination="hlW-FL-f1g" collectionClass="NSMutableArray" id="Rfw-XB-Ae0"/>
+                        <outletCollection property="calculatorButtons" destination="xSb-aw-qG6" collectionClass="NSMutableArray" id="2Uz-Se-dvI"/>
+                        <outletCollection property="operationButtons" destination="J9f-xA-DEw" collectionClass="NSMutableArray" id="NBk-0B-COr"/>
+                        <outletCollection property="operationButtons" destination="znO-cK-oqY" collectionClass="NSMutableArray" id="kTB-Fj-2D3"/>
+                        <outletCollection property="operationButtons" destination="iZi-Zh-UDc" collectionClass="NSMutableArray" id="4xf-az-tTC"/>
+                        <outletCollection property="operationButtons" destination="69h-BK-crc" collectionClass="NSMutableArray" id="h7S-2q-8P2"/>
+                        <outletCollection property="operationButtons" destination="Hsk-p9-pXL" collectionClass="NSMutableArray" id="3PI-vJ-PXt"/>
+                        <outletCollection property="operationButtons" destination="00M-xG-RjW" collectionClass="NSMutableArray" id="dRr-20-blc"/>
+                        <outletCollection property="operationButtons" destination="54O-QH-KGy" collectionClass="NSMutableArray" id="W42-J6-paT"/>
+                        <outletCollection property="actionButtons" destination="KcB-gs-MzA" collectionClass="NSMutableArray" id="vPN-6w-FtJ"/>
+                        <outletCollection property="actionButtons" destination="ejb-Ls-7pj" collectionClass="NSMutableArray" id="apD-gD-JcU"/>
+                        <outletCollection property="userInputTextViews" destination="xjp-jX-aCa" collectionClass="NSMutableArray" id="wmE-xO-uQV"/>
+                        <outletCollection property="userInputTextViews" destination="QhY-QJ-fOy" collectionClass="NSMutableArray" id="YYf-H9-1el"/>
+                        <outletCollection property="userInputTextViews" destination="dtG-P9-ErT" collectionClass="NSMutableArray" id="xCN-oc-xma"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XlM-Mi-sc2" userLabel="First Responder" sceneMemberID="firstResponder"/>

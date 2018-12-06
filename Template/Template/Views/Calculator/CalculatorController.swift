@@ -9,8 +9,10 @@
 import Foundation
 import FSPagerView
 
+/// CalculatorViewController Adheres to this protocol
+/// Used to select the non header user values that need input
 protocol CalculationControllerDelegate: class {
-    
+    func didTouchHeaderCalculation(fieldID: Int)
 }
 
 class CalculationController: NSObject {
@@ -28,6 +30,13 @@ class CalculationController: NSObject {
         headerCells.append(UserCalcInput.init(type: .oil))
         headerCells.append(UserCalcInput.init(type: .weight))
     }
+    
+    func listenForCalculatorButtonPress(sender: UIButton) {
+        ///Delegate method fired when any button on the calculator is pressed
+        ///Which then fires off a notification for mutlipe things to listen to
+        ///Takes button then fires off notification on which number/value
+    }
+    
 }
 
 extension CalculationController: FSPagerViewDelegate, FSPagerViewDataSource {
@@ -41,9 +50,24 @@ extension CalculationController: FSPagerViewDelegate, FSPagerViewDataSource {
         cell.backgroundImageView.clipsToBounds = true
         cell.backgroundImageView.contentMode = .scaleAspectFill
         cell.calculationTextField.text = "\(headerCells[index].calculation ?? 0)"
+        cell.calculationTextField.delegate = self
+        cell.calculationTextField.tag = index
         cell.infoTextLabel.text = headerCells[index].infoText
         cell.metricLabel.text = headerCells[index].metric
         cell.infoTextTitleLabel.text = headerCells[index].title
+        cell.type = headerCells[index].type
         return cell
     }
+    
+}
+
+extension CalculationController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        delegate?.didTouchHeaderCalculation(fieldID: textField.tag)
+    }
+}
+
+extension Notification.Name {
+    static let calculatorButtonPress = Notification.Name("calcButtonPress")
 }

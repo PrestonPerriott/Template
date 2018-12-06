@@ -22,7 +22,7 @@ class CalculatorHeaderCell: FSPagerViewCell {
     @IBOutlet weak var infoTextCloseButton: UIButton!
     @IBOutlet weak var infoTextLabel: UILabel!
     
-    
+    var type: type!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -44,9 +44,6 @@ class CalculatorHeaderCell: FSPagerViewCell {
             self.infoTextView.alpha = 0.0
             self.calculationTextField.alpha = 1.0
             self.infoButton.alpha = 1.0
-//            self.infoTextView.alpha = self.infoTextView.alpha == 0 ? 0.65 : 0
-//            self.calculationTextField.alpha = self.calculationTextField.alpha == 0 ? 1.0 : 0
-//            self.infoButton.alpha = self.infoButton.alpha == 0 ? 1.0 : 0
         }, completion: nil)
     }
     

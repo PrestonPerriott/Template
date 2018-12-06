@@ -32,7 +32,7 @@ class HomeController: NSObject {
         } else {
             category = user.previousCategory
         }
-        print("Our retrunes category is \(category)")
+        print("Our returned category is \(category)")
         return category
     }
     private var currentUser: User?

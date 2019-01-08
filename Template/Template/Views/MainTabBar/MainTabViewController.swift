@@ -28,16 +28,16 @@ extension MainTabViewController {
     
     private func createTabController() {
         let home = formNavController("Home", "HomeViewController", HomeViewController.self)
-        home.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
+        home.tabBarItem = UITabBarItem(title: "Recipes", image: UIImage.init(named: "home"), tag: 0)
         home.tabBarItem.title = "Recipes"
         /// https://stackoverflow.com/questions/29092988/leftbarbuttonitem-does-not-show-up-in-the-navigation-bar
         home.navigationBar.topItem?.title = "Recipes"
-        home.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .done, target: self, action: #selector(showMenu))
+        home.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(image: UIImage.init(named: "menu"), style: .done, target: self, action: #selector(showMenu))
         
         let calc = formNavController("Calculator", "CalculatorViewController", CalculatorViewController.self)
-        calc.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 1)
+        calc.tabBarItem = UITabBarItem(title: "Calculator", image: UIImage.init(named: "calculator"), tag: 1)
         calc.navigationBar.topItem?.title = "Calculator"
-        calc.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .done, target: self, action: #selector(showMenu))
+        home.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(image: UIImage.init(named: "menu"), style: .done, target: self, action: #selector(showMenu))
         
         setUpMenu()
         barController.setViewControllers([home, calc], animated: true)

@@ -30,4 +30,11 @@ extension String {
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
         return passwordTest.evaluate(with: self)
     }
+    
+    func hasNumbers() -> Bool {
+        ///Checks is a string includes digits
+        let numbersRange = self.rangeOfCharacter(from: .decimalDigits)
+        let hasNumbers = (numbersRange != nil)
+        return hasNumbers
+    }
 }

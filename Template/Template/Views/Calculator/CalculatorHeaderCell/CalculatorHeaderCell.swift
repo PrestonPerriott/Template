@@ -23,11 +23,13 @@ class CalculatorHeaderCell: FSPagerViewCell {
     @IBOutlet weak var infoTextLabel: UILabel!
     
     var type: type!
+    let controller = CalculatorHeaderCellController()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         infoTextLabel.layer.cornerRadius = 5
         infoTextLabel.padding = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        calculationTextField.delegate = controller
     }
     
     @IBAction func infoButtonTapped(_ sender: UIButton) {

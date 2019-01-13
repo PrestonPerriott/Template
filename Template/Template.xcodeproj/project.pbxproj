@@ -30,6 +30,7 @@
 		834D5DAE2159DE40001614CD /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D5DAD2159DE40001614CD /* RealmService.swift */; };
 		834D5DB12159E4F3001614CD /* CompletionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D5DB02159E4F3001614CD /* CompletionHelper.swift */; };
 		834D5DB4215AD414001614CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D5DB3215AD414001614CD /* User.swift */; };
+		834ED2F621E54BCA00C5E309 /* DirectedAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834ED2F521E54BCA00C5E309 /* DirectedAlert.swift */; };
 		835391E42199D17600648562 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835391E32199D17600648562 /* Calculator.storyboard */; };
 		835391E62199D18F00648562 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835391E52199D18F00648562 /* CalculatorViewController.swift */; };
 		835391E82199D1BF00648562 /* CalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835391E72199D1BF00648562 /* CalculatorController.swift */; };
@@ -88,6 +89,7 @@
 		834D5DAD2159DE40001614CD /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		834D5DB02159E4F3001614CD /* CompletionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHelper.swift; sourceTree = "<group>"; };
 		834D5DB3215AD414001614CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		834ED2F521E54BCA00C5E309 /* DirectedAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectedAlert.swift; sourceTree = "<group>"; };
 		835391E32199D17600648562 /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
 		835391E52199D18F00648562 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		835391E72199D1BF00648562 /* CalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorController.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			children = (
 				836ECB1F2158ACB100B6AA20 /* FloatTextField.swift */,
 				835391ED219A26C400648562 /* CircularSlider.swift */,
+				834ED2F521E54BCA00C5E309 /* DirectedAlert.swift */,
 			);
 			path = Supplementary;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				"${BUILT_PRODUCTS_DIR}/MediumMenu/MediumMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SJFluidSegmentedControl/SJFluidSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -498,6 +502,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MediumMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJFluidSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -556,6 +561,7 @@
 				8319CC4121A33B86005CE3E3 /* RecipeDetailViewController.swift in Sources */,
 				830CD6792180C79A003C91A9 /* UIViewController+Navigation.swift in Sources */,
 				834D5DB12159E4F3001614CD /* CompletionHelper.swift in Sources */,
+				834ED2F621E54BCA00C5E309 /* DirectedAlert.swift in Sources */,
 				8319CC4321A33B9C005CE3E3 /* RecipeDetailController.swift in Sources */,
 				835C363E216EC2FE00A94A52 /* Ecodable+Dictionary.swift in Sources */,
 				836ECB2721597EDC00B6AA20 /* LoginController.swift in Sources */,

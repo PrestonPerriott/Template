@@ -27,14 +27,14 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.0" textAlignment="center" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="aLa-fx-NmS">
-                        <rect key="frame" x="437" y="180" width="64" height="48"/>
+                        <rect key="frame" x="437" y="165" width="64" height="48"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metric" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mat-Ro-DTw">
-                        <rect key="frame" x="432" y="228" width="74" height="24"/>
+                        <rect key="frame" x="432" y="213" width="74" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -115,7 +115,7 @@
                 <constraint firstAttribute="bottom" secondItem="sAx-dk-hNe" secondAttribute="bottom" id="hBo-ke-BJ0"/>
                 <constraint firstAttribute="bottom" secondItem="YHG-yW-jo5" secondAttribute="bottom" id="kxZ-2G-uza"/>
                 <constraint firstAttribute="trailing" secondItem="Wyg-c7-CSa" secondAttribute="trailing" constant="10" id="pW0-Gj-pD7"/>
-                <constraint firstAttribute="bottom" secondItem="Mat-Ro-DTw" secondAttribute="bottom" id="pgZ-Zw-jNp"/>
+                <constraint firstAttribute="bottom" secondItem="Mat-Ro-DTw" secondAttribute="bottom" constant="15" id="pgZ-Zw-jNp"/>
                 <constraint firstAttribute="bottom" secondItem="Wyg-c7-CSa" secondAttribute="bottom" constant="10" id="qal-79-yaT"/>
                 <constraint firstItem="nin-LF-XeB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="sSv-yR-Jd3"/>
                 <constraint firstItem="nin-LF-XeB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="tcT-ZZ-hs0"/>

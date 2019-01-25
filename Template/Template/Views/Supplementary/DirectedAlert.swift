@@ -54,6 +54,8 @@ open class DirectedAlert: UIView {
     open var color: UIColor = UIColor.white
     open var dismissOnTap: Bool = true
     open var showOverlay: Bool = true
+
+    open var slider: sliderRenderer!
     
     // custom closure
     open var willShowHandler: (() -> ())?
@@ -185,6 +187,27 @@ open class DirectedAlert: UIView {
             if self.dismissOnTap {
                 self.overLay.addTarget(self, action: #selector(DirectedAlert.dismiss), for: .touchUpInside)
             }
+        }
+        
+        switch self.alertType {
+        case .alert:
+            
+            break
+        case .input:
+            break
+        case .selection:
+            break
+        case .slider:
+            ///TODO: How do we then solve delegation for the slider to the controller
+            let slider = UISlider()
+            slider.frame = contentView.frame
+            slider.thumbTintColor = .blue
+            slider.isContinuous = true
+            contentView.addSubview(slider)
+            
+            let slide = sliderRenderer(frame: contentView.frame)
+            slide.isContinuous = true
+            break
         }
         
         self.containerView = insideView
@@ -474,3 +497,73 @@ private extension DirectedAlert {
         return CGFloat.pi * degrees / 180
     }
 }
+
+
+
+@objc public protocol DirectedAlertSliderDelegate: class {
+    
+    /// Tells us when the slider started sliding and its value
+    ///
+    /// - Parameter alertSlider: the dropped down slider
+    /// - Returns: slider value
+    func sliderDidSlideToValue(_ alertSlider: sliderRenderer) -> Int
+    
+    
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - alertSlider: <#alertSlider description#>
+    ///   - color: <#color description#>
+    func sliderColor(_ alertSlider: sliderRenderer, color: UIColor)
+    
+    
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - alertSlider: <#alertSlider description#>
+    ///   - position: <#position description#>
+    func updateSliderToPosition(_ alertSlider: sliderRenderer, position: Int)
+    
+    
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - alertSlider: <#alertSlider description#>
+    ///   - close: <#close description#>
+    func shouldCloseSlider(_ alertSlider: sliderRenderer, close: Bool)
+}
+
+public class sliderRenderer: UISlider {
+    
+    weak open var delegate: AnyObject? {
+        didSet {
+            if let d = delegate {
+                if let d = (d as? DirectedAlertSliderDelegate) {
+                    delegate = d
+                } else {
+                    assertionFailure("Must Implement Delegate")
+                }
+            }
+        }
+    }
+    
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    func commonInit() {
+        self.addTarget(self, action: "sliderValueChanged:", for: .valueChanged)
+    }
+    
+//    func updatedValue() -> String {
+//
+//    }
+}
+

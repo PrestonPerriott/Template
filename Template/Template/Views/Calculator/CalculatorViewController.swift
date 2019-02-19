@@ -8,6 +8,7 @@
 
 import UIKit
 import FSPagerView
+import SJFluidSegmentedControl
 
 enum FieldID: Int {
     case spice = 0
@@ -20,6 +21,10 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var overlapHeaderView: UIView!
     @IBOutlet weak var carouselView: FSPagerView!
     @IBOutlet weak var carouselPageControl: FSPageControl!
+    
+    
+    @IBOutlet weak var segmentedControl: SJFluidSegmentedControl!
+    
     
     @IBOutlet weak var calculatedStaticVariablesView: UIView!
     /// 3 textviews for Herb, Oil and Weight
@@ -73,6 +78,9 @@ class CalculatorViewController: UIViewController {
         controller.registerHeaderCell(fsPagerView: carouselView)
         controller.delegate = self
         
+        segmentedControl.dataSource = controller
+        segmentedControl.delegate = controller
+        
     }
 
     @IBAction func pressedCalcViewButton(sender: UIButton) {
@@ -87,19 +95,40 @@ class CalculatorViewController: UIViewController {
         if let pressed = notification.userInfo?["Button"] as? String {
             ///find the active textfield and insert the latest value there.
             print("The button that was passed is : \(pressed)")
-            userInputTextViews[carouselView.currentIndex].text?.append(pressed)
+            if (userInputTextViews[carouselView.currentIndex].text?.hasNumbers())! {
+                userInputTextViews[carouselView.currentIndex].text?.append(pressed)
+            } else if !(userInputTextViews[carouselView.currentIndex].text?.hasNumbers())! {
+                userInputTextViews[carouselView.currentIndex].text? = ""
+                userInputTextViews[carouselView.currentIndex].text?.append(pressed)
+            }
+            
         } else {
             /// If that button key value pair isn't there
         }
     }
-
     
 }
 
-
 extension CalculatorViewController: CalculationControllerDelegate {
-   
-    func didTouchHeaderCalculation(fieldID: Int) {
+    
+    func willShowSegmentView(segmentView: UIView) {
+        self.view.addSubview(segmentView)
+    }
+    
+    func didMoveSegment(fieldID: Int) {
+        carouselView.scrollToItem(at: fieldID, animated: true)
+        userInputTextViews[fieldID].becomeFirstResponder()
+        print("calling did move segment")
+    }
+    
+    func didMoveHeader(fieldID: Int) {
+        segmentedControl.setCurrentSegmentIndex(fieldID, animated: true)
+        userInputTextViews[fieldID].becomeFirstResponder()
+        print("Calling didMoveHeader")
+    }
+    
+    ///should be replaced by delegation in the headercell ie. isUpdatingHeaderText
+    func didTouchHeaderCalculation(fieldID: Int) { ///Should eb alterting large calcText
         for tf in userInputTextViews {
             tf.textColor = UIColor.white
         }
@@ -107,20 +136,14 @@ extension CalculatorViewController: CalculationControllerDelegate {
             switch id {
             case .spice:
                 print("target spice textfield")
-                userInputTextViews[fieldID].textColor = UIColor.red
                 userInputTextViews[fieldID].inputView = calculatorView
             case .oil:
                 print("target the oil field")
-                userInputTextViews[fieldID].textColor = UIColor.red
                 userInputTextViews[fieldID].inputView = calculatorView
             case .weight:
                 print("target weight field")
-                userInputTextViews[fieldID].textColor = UIColor.red
                 userInputTextViews[fieldID].inputView = calculatorView
             }
         }
     }
-    
-
-    
 }

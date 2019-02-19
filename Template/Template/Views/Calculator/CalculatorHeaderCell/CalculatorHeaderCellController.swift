@@ -9,8 +9,19 @@
 import Foundation
 import UIKit
 
+protocol CalculatorHeaderCellDelegate: class {
+    
+}
 
 class CalculatorHeaderCellController: NSObject {
     
+    weak var cellDelegate: CalculatorHeaderCellDelegate?
+}
+
+extension CalculatorHeaderCellController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        ///Fire off notification for other listeners 
+    }
 }
 

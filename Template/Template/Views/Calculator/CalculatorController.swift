@@ -128,10 +128,11 @@ extension CalculationController: SJFluidSegmentedControlDelegate, SJFluidSegment
             
         } else if toIndex == 1 {
             
+            let options2: [Option] = [.color(.black), .type(.slider)]
             ///Maybe 3D tocuh for oil/butter option??
             let viewHeight = segmentedControl.frame.height * 2
             view.frame = CGRect.init(x: 0, y: 0, width: segmentedControl.frame.width / 2, height:viewHeight * 0.8)
-            let alert = DirectedAlert(options: options, showHandler: nil, dismissHandler: nil)
+            let alert = DirectedAlert(options: options2, showHandler: nil, dismissHandler: nil)
             alert.show(view, point: CGPoint(x: segmentedControl.frame.midX, y: segmentedControl.frame.maxY))
            // delegate?.willShowSegmentView(segmentView: view)
             

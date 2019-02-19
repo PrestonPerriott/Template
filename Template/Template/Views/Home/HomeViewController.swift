@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
         setupCollectionView()
 
         if let current = RealmService.shared.getCurrentUser() {
-            print("The accessToken of our current user is : \(current.accessToken)")
+            print("HomeVC - The accessToken of our current user is : \(current.accessToken)")
         }
     }
     

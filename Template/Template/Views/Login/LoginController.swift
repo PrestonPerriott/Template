@@ -30,6 +30,11 @@ class LoginController: NSObject {
                     let err =  NSError(domain: "Failed to Save to Realm", code: 5000, userInfo: nil)
                     completion(NetworkResults(err: results.err ?? err, res: nil))
                 }
+            } else {
+                if let err = results.err {
+                    print("The error that we're decoding is : \(err)")
+                    completion(NetworkResults(err: err, res: nil))
+                }
             }
         })
     }
@@ -46,6 +51,12 @@ class LoginController: NSObject {
                     let err =  NSError(domain: "Failed to Save to Realm", code: 5000, userInfo: nil)
                     completion(NetworkResults(err: results.err ?? err, res: nil))
                 }
+            } else {
+                if let err = results.err {
+                    print("The boiled down error is : \(err)")
+                    completion(NetworkResults(err: err, res: nil))
+                }
+
             }
         })
     }

@@ -68,7 +68,11 @@ class LoginViewController: UIViewController {
             print("Pressed Register")
             controller.register(with: usernameTextField.text ?? "", email: emailTextfield.text ?? "", password: passwordTextfield.text ?? "", completion: {(result) in
                 if let err = result.err {
+                    SVProgressHUD.dismiss()
                     print("Our error is : \(err.localizedDescription)")
+                    ///present error in alert
+                    let al = Modal(title: "Error", message: err.localizedDescription, options: [.modalColor(.darkGray), .modalTextColor(.white)])
+                    al.show(animated: true)
                 } else {
                     SVProgressHUD.dismiss()
                     let mainCont = MainTabViewController()
@@ -81,7 +85,10 @@ class LoginViewController: UIViewController {
             print("Pressed Login")
             controller.login(with: emailTextfield.text ?? "", password: passwordTextfield.text ?? "", completion: {(result) in
                 if let err = result.err {
+                     SVProgressHUD.dismiss()
                     print("Our error is : \(err.localizedDescription)")
+                    let al = Modal(title: "Error", message: err.localizedDescription, options: [.modalColor(.darkGray), .modalTextColor(.white)])
+                    al.show(animated: true)
                 } else {
                     SVProgressHUD.dismiss()
                     let mainCont = MainTabViewController()

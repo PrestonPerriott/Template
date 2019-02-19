@@ -50,7 +50,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ej6-Ic-T3B">
-                                <rect key="frame" x="75" y="214" width="225" height="29"/>
+                                <rect key="frame" x="50" y="214" width="275" height="29"/>
                                 <segments>
                                     <segment title="Login"/>
                                     <segment title="Register"/>
@@ -58,7 +58,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j5z-dh-X9d" customClass="FloatField" customModule="Template" customModuleProvider="target">
-                                <rect key="frame" x="75" y="441" width="225" height="30"/>
+                                <rect key="frame" x="75" y="425" width="225" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LWm-nv-yrf"/>
                                 </constraints>
@@ -71,7 +71,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9Z-oQ-Aiz" customClass="FloatField" customModule="Template" customModuleProvider="target">
-                                <rect key="frame" x="75" y="479" width="225" height="30"/>
+                                <rect key="frame" x="75" y="471" width="225" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="r5h-7C-v3u"/>
                                 </constraints>
@@ -131,17 +131,17 @@
                             <constraint firstItem="3NG-XS-1Bn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Og4-sC-9u2"/>
                             <constraint firstAttribute="trailing" secondItem="1Av-uA-uzt" secondAttribute="trailing" constant="-2" id="T74-ol-DyG"/>
                             <constraint firstItem="6CI-Ll-rJu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TJG-AW-XmU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ej6-Ic-T3B" secondAttribute="trailing" constant="75" id="Whx-6q-7gj"/>
-                            <constraint firstItem="o9Z-oQ-Aiz" firstAttribute="top" secondItem="j5z-dh-X9d" secondAttribute="bottom" constant="8" id="b9s-Yi-k7o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ej6-Ic-T3B" secondAttribute="trailing" constant="50" id="Whx-6q-7gj"/>
+                            <constraint firstItem="o9Z-oQ-Aiz" firstAttribute="top" secondItem="j5z-dh-X9d" secondAttribute="bottom" constant="16" id="b9s-Yi-k7o"/>
                             <constraint firstItem="o9Z-oQ-Aiz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="bh2-MK-b1z"/>
-                            <constraint firstItem="FyK-Qc-RqD" firstAttribute="top" secondItem="o9Z-oQ-Aiz" secondAttribute="bottom" constant="8" id="bzb-2X-YAj"/>
+                            <constraint firstItem="FyK-Qc-RqD" firstAttribute="top" secondItem="o9Z-oQ-Aiz" secondAttribute="bottom" constant="16" id="bzb-2X-YAj"/>
                             <constraint firstItem="Ej6-Ic-T3B" firstAttribute="top" secondItem="bEW-Ii-bdI" secondAttribute="bottom" constant="8" id="mPk-J4-sxX"/>
                             <constraint firstItem="6CI-Ll-rJu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ne9-0W-D48"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FyK-Qc-RqD" secondAttribute="trailing" constant="75" id="qUo-7h-0qN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6CI-Ll-rJu" secondAttribute="trailing" id="rLD-Wf-cdw"/>
                             <constraint firstItem="bEW-Ii-bdI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sc8-Vl-XmE"/>
                             <constraint firstAttribute="bottom" secondItem="6CI-Ll-rJu" secondAttribute="bottom" id="t60-9w-pMM"/>
-                            <constraint firstItem="Ej6-Ic-T3B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="tdS-Ed-hs9"/>
+                            <constraint firstItem="Ej6-Ic-T3B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="tdS-Ed-hs9"/>
                             <constraint firstItem="3NG-XS-1Bn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vZE-Td-aR9"/>
                             <constraint firstItem="1Av-uA-uzt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wLj-7G-Iia"/>
                         </constraints>

@@ -47,7 +47,7 @@ class HomeController: NSObject {
         SVProgressHUD.show()
         let group = DispatchGroup()
         group.enter()
-        
+
         /// For this logic to work, we would need to save the updated prevCat to realm but mongo also
         if let savedRecipes = (RealmService.shared.getDailyRecipes()) {
             if (savedRecipes.count > 0) {
@@ -62,7 +62,8 @@ class HomeController: NSObject {
                 }
             } else {
                 /// Else hit the API for a random w/ a randome recipes cat and save the category & recipe
-                RecipeService.getDailyRecipes(for: self.previousCategory, completion: {(results) in
+                RecipeService.getDailyRecipes(for: self.randomCategory.rawValue, completion: {(results) in
+                    print("The results are : \(results)")
                     if let returnedRecipes = results.res {
                         
                         let list = List<Recipe>()
@@ -78,8 +79,9 @@ class HomeController: NSObject {
                             print("Error saving recipes to DB")
                         }
                     } else {
-                        let err = NSError(domain: "Unknown connection err", code: 300, userInfo: nil)
-                        print(err)
+                        if let err = results.err {
+                            print("Error from node app is : \(err.localizedDescription)")
+                        }
                     }
                     
                     SVProgressHUD.dismiss()
@@ -92,7 +94,7 @@ class HomeController: NSObject {
             }
             
         } else {
-            
+
             /// Larger problem on my hands
             
 /**/     }

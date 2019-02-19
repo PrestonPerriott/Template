@@ -54,6 +54,8 @@ open class DirectedAlert: UIView {
     open var color: UIColor = UIColor.white
     open var dismissOnTap: Bool = true
     open var showOverlay: Bool = true
+
+    open var slider: sliderRenderer!
     
     // custom closure
     open var willShowHandler: (() -> ())?
@@ -185,6 +187,27 @@ open class DirectedAlert: UIView {
             if self.dismissOnTap {
                 self.overLay.addTarget(self, action: #selector(DirectedAlert.dismiss), for: .touchUpInside)
             }
+        }
+        
+        switch self.alertType {
+        case .alert:
+            
+            break
+        case .input:
+            break
+        case .selection:
+            break
+        case .slider:
+            ///TODO: How do we then solve delegation for the slider to the controller
+            let slider = UISlider()
+            slider.frame = contentView.frame
+            slider.thumbTintColor = .blue
+            slider.isContinuous = true
+            contentView.addSubview(slider)
+            
+            let slide = sliderRenderer(frame: contentView.frame)
+            slide.isContinuous = true
+            break
         }
         
         self.containerView = insideView
@@ -474,3 +497,71 @@ private extension DirectedAlert {
         return CGFloat.pi * degrees / 180
     }
 }
+
+
+
+@objc public protocol DirectedAlertSliderDelegate: class {
+    
+    /// Tells the delegate that the slider value has changed
+    ///
+    /// - Parameter alertSlider: the dropped down slider
+    /// - Returns: slider value
+    func slideRender(_ alertSlider: sliderRenderer, didSlideToValue: Int, fromValue: Int)
+}
+
+public class sliderRenderer: UISlider {
+    
+    weak open var delegate: AnyObject? {
+        didSet {
+            if let d = delegate {
+                if let d = (d as? DirectedAlertSliderDelegate) {
+                    delegate = d
+                } else {
+                    assertionFailure("Must Implement Delegate")
+                }
+            }
+        }
+    }
+    
+    open var currentValue: Int = 0 {
+        didSet {
+            if currentValue != oldValue {
+                setSliderValue(currentValue, animated: true)
+            }
+        }
+    }
+    
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    func commonInit() {
+        self.addTarget(self, action: "sliderValueChanged:", for: .valueChanged)
+    }
+
+    /// Sets slider value
+    ///
+    /// - Parameters:
+    ///   - value: value to set slider at
+    ///   - shouldAnimate: should action be animated
+    public func setSliderValue(_ value: Int, animated shouldAnimate: Bool) {
+        
+        assert(delegate != nil, "Delegate of slider \(self) was not set")
+        currentValue = value
+    
+    }
+    
+    fileprivate func changeSliderToValue(_ value:Int) {
+        let oldVal = currentValue
+        currentValue = value
+        delegate?.slideRender(self, didSlideToValue: value, fromValue: oldVal)
+    }
+}
+

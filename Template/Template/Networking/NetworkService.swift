@@ -117,8 +117,10 @@ extension NetworkService {
         } catch {
             ///Need to make an error class 
             print("Our error trying to decode the res obj is: \(error)")
+            let json = JSON.init(data)
             print("The blob object looks like : \(JSON.init(data))")
-            self.compltetionHandler?(NetworkResults(err: error as NSError, res: nil))
+            let err = NSError(domain: json["message"].string ?? "", code: 500, userInfo: nil)
+            self.compltetionHandler?(NetworkResults(err: err, res: nil))
         }
     }
     
